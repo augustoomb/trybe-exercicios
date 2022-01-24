@@ -11,3 +11,4 @@ Jest
 SQL
 TypeScript
 Python
+Logica de programacao
