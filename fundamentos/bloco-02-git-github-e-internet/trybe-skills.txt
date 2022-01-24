@@ -1,0 +1,13 @@
+Unix
+Bash
+Git
+GitHub
+JavaScript
+React
+NodeJs
+HTML
+CSS
+Jest
+SQL
+TypeScript
+Python
