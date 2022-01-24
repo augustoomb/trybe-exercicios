@@ -11,3 +11,6 @@ Jest
 SQL
 TypeScript
 Python
+Orientacao a objetos
+Redes
+Algoritmos
