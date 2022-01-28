@@ -28,7 +28,8 @@
 .baloon {
   width: 30%;
   position: absolute;
-  margin-top: 40%;
+  top: 7%;
+  left: 38%;
   z-index: 4;
 }
 
@@ -36,16 +37,16 @@
   width: 30%;
   font-size: 23px;
   position: absolute;
-  margin-top: 48%;
-  margin-left: 3%;
+  top: 18%;
+  left: 43%;
   z-index: 5;
 }
 
 .bowser {
   /* width: 200px; */
-  width: 35%;
+  width: 30%;
   position: absolute;
-  margin-left: 35%;
-  margin-top: 60%;
+  left: 65%;
+  top: 35%;
   z-index: 3;
 }
