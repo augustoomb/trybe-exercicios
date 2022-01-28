@@ -1,3 +1,48 @@
+
+/* 1 - Estilize as divs para que,
+ ao passar o cursor por cima das mesmas, elas ganhem uma borda. */
 div:hover {
     border: 0.5px dashed goldenrod;
 }
+
+/* 2 - Faça cada div ter uma cor própria.*/
+
+body :nth-child(3) {background-color: #1d3557;}
+
+body :nth-child(4) {background-color: #457b9d;}
+
+body :nth-child(5) {background-color: #e63946;}
+
+body :nth-child(6) {background-color: #a8dadc;}
+
+body :nth-child(7) {background-color: #f1faee;}
+
+
+/* 3 - Estilize cada uma das tags h3. */
+
+/* ESTOU APLICANDO PRA TODO A DIV. QUERIA APLICAR SÓ PRO H3. */
+body :nth-child(3) {color: pink;}
+
+/* ESTOU APLICANDO PRA TODO A DIV. QUERIA APLICAR SÓ PRO H3. */
+body :nth-child(4) {color: yellow;}
+
+/* ESTOU APLICANDO PRA TODO A DIV. QUERIA APLICAR SÓ PRO H3. */
+body :nth-child(5) {color: green;}
+
+/* ESTOU APLICANDO PRA TODO A DIV. QUERIA APLICAR SÓ PRO H3. */
+body :nth-child(6) {color: brown;}
+
+/* ESTOU APLICANDO PRA TODO A DIV. QUERIA APLICAR SÓ PRO H3. */
+body :nth-child(7) {color: pink;}
+
+
+
+/* 4 - Faça a terceira div ser maior que as demais. */
+
+body :nth-child(5) {height: 70px;}
+
+
+
+/* 5 - Deixe as tags ímpares h3 com o texto em itálico. */
+
+body :nth-child(even) {text-decoration: underline;}
