@@ -1,34 +1,51 @@
 /*Personagens pertencentes à Nintendo©
 1 - Posicione o Mário acima do Goomba.
-  *COLOCAR MÁRIO COMO POSITION: ABSOLUTE
-  *BOWSER FICOU POR BAIXO TAMBÉM, POR ISSO COLOQUEI PRA ELE: margin-left: 50% 
-  *TEXTO E BALOON TAMBÉM, POR ISSO COLOQUEI MARGIN PRA ELES
 2 - Posicione a tag p para que fique dentro do balão de fala.
 3 - Posicione o balão para que se torne uma fala de Bowser.*/
 
-body {
-    background-color: grey;
-}
+/*
+  Solução: 
+  Todos os elementos como position: absolute
+  z-index para todos, sendo o goomba um numero menor que o mario e o baloon, menor que o speach
+  adequar todos com 'margin' (usei margin com %)
+  unidade de medida de todos os width foi trocada de 'px' para %
+*/
 
 .super-mario {
-  width: 200px;
-  position: absolute
+  /*width: 200px;*/
+  width: 26%;
+  position: absolute;
+  z-index: 2;
 }
 
 .goomba {
-  width: 100px;
+  /* width: 100px; */
+  width: 11%;
+  position: absolute;
+  z-index: 1;
 }
 
 .baloon {
-  margin-top: 20%;
+  width: 30%;
+  position: absolute;
+  margin-top: 40%;
+  z-index: 4;
 }
 
 .speach {
-  font-size: 25px;
-  margin-top: 20%;
+  width: 30%;
+  font-size: 23px;
+  position: absolute;
+  margin-top: 48%;
+  margin-left: 3%;
+  z-index: 5;
 }
 
 .bowser {
-  width: 200px;
-  margin-left: 50%;
+  /* width: 200px; */
+  width: 35%;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 60%;
+  z-index: 3;
 }
