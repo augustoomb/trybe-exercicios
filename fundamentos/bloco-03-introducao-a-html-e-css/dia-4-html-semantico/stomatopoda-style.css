@@ -1,0 +1,9 @@
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+}
