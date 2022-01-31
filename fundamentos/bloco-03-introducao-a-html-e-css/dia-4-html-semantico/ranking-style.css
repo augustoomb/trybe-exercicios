@@ -35,3 +35,11 @@ h1 {
   #perdedores {
     text-align: center;
   }
+
+  #descricao-podio  {
+    text-align: center;
+  }
+
+  #descricao-podio li {
+      display: inline-block;
+  }
