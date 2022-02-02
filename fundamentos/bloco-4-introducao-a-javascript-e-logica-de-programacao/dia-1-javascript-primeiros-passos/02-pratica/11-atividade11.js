@@ -25,6 +25,47 @@ Exemplo : Uma pessoa possui o salário bruto de R$ 3.000,00. O cálculo será:
     R$ 142,80 parcela a se deduzir do imposto.
     Fazendo a conta, temos: (7,5% de R$ 2.670,00) - R$ 142,80 = R$ 57,45
     O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
-    
+
 Resultado: R$ 2.612,55.
 Dica: que tal identificar as alíquotas com variáveis de nomes explicativos? */
+
+let salarioBruto = 3000
+let salarioLiquido;
+let inss;
+let ir;
+
+
+if(salarioBruto <= 1556.94){
+    inss = salarioBruto * 0.08
+}
+else if(salarioBruto >= 1556.95 && salarioBruto <= 2594.92){
+    inss = salarioBruto * 0.09
+}
+else if(salarioBruto >= 2594.93 && salarioBruto <= 5189.82){
+    inss = salarioBruto * 0.11
+}
+else{
+    inss = 570.88
+}
+
+salarioLiquido = salarioBruto - inss
+
+if(salarioLiquido <= 1903.98){
+    ir = 0;
+}
+else if(salarioLiquido >= 1903.99 && salarioLiquido <= 2826.65){
+    ir = (salarioLiquido * 0.075) - 142.80
+}
+else if(salarioLiquido >= 2826.66 && salarioLiquido <= 3751.05){
+    ir = (salarioLiquido * 0.15) - 354.80
+}
+else if(salarioLiquido >= 3751.06 && salarioLiquido <= 4664.68){
+    ir = (salarioLiquido * 0.225) - 636.13
+}
+else{
+    ir = (salarioLiquido * 0.275) - 869.36
+}
+
+salarioLiquido = salarioLiquido - ir
+
+console.log(salarioLiquido)
