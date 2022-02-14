@@ -34,5 +34,7 @@ h4FilhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling
 /*Remova todos os elementos filhos de paiDoPai exceto pai , 
 elementoOndeVoceEsta e primeiroFilhoDoFilho .*/
 
+
+
 //
 
