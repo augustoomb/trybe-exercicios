@@ -46,7 +46,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 5-7: _[Projeto - Lista de tarefas]()_
 - [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
 - [ ] 5-7: _[Projeto - Carta Misteriosa]()_
-- [ ] ---: _[Bônus   - Jogo da Velha](https://github.com/augustoomb/meus-projetos-bonus/tree/main/dojo-jogo-da-velha-fundamentos-5.4)_
+- [X] ---: _[Bônus   - Jogo da Velha](https://github.com/augustoomb/meus-projetos-bonus/tree/main/dojo-jogo-da-velha-fundamentos-5.4)_
 
 ##### Bloco 6: HTML & CSS avançado
 
