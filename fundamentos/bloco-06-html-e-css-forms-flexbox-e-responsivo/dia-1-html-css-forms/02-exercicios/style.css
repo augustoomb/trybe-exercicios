@@ -16,6 +16,17 @@ button {
     color:black
 }
 
+#botao-enviar{
+    background-color: green;
+    color: white;
+}
+
+#botao-apagar{
+    background-color: red;
+    color: white;
+}
+
 .bold {
     font-weight: bold;
 }
+
