@@ -1,0 +1,21 @@
+*{
+    margin-bottom: 8px;
+}
+#nome-email label, #checks label{
+    display:block;
+}
+
+#campos {
+    border: 3px solid black;
+    padding-top: 10px;
+}
+
+button {
+    border-radius: 5px;
+    font-size: 15px;
+    color:black
+}
+
+.bold {
+    font-weight: bold;
+}
