@@ -1,0 +1,32 @@
+*{
+    margin: 3px;
+}
+#nome-email label, #checks label{
+    display:block;
+}
+
+#campos {
+    border: 1px solid black;
+    /*padding-top: 10px;*/
+}
+
+/*button {
+    border-radius: 5px;
+    font-size: 15px;
+    color:black
+}*/
+
+/*#botao-enviar{
+    background-color: green;
+    color: white;
+}*/
+
+/*#botao-apagar{
+    background-color: red;
+    color: white;
+}*/
+
+.bold {
+    font-weight: bold;
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--bootstrap e Jquery-->
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+    <!--bootstrap e Jquery-->
+
+
+</head>
+<body>
+    <header id="header">
+        <h1 class="display-4 text-muted">TrybeTrip</h1>
+    </header>
+
+    <section >
+        <form action="#" method="get" autocomplete="off" id="form">
+            <div id="campos">
+
+                <div id="nome-email" class="form-group">
+                    <label for="nome-usuario"><span class="bold">Nome:</span></label>
+                    <input type="text" name="nome-usuario" id="nome-usuario" autocomplete="off" class="form-control" autofocus>
+                    <label for="email-usuario"><span class="bold">Email:</span></label>
+                    <input type="email" name="" minlength="10" maxlength="50" id="email-usuario" class="form-control">
+                </div>
+
+                <div id="destinos" class="form-group">
+                    <span class="bold">Destino Preferido:</span>
+                    <label for="destino-1"></label>
+                    <input type="radio" name="destino" id="destino-1" value="cidade" >Cidade
+                    <label for="destino-2"></label>
+                    <input type="radio" name="destino" id="destino-2" value="campo">Campo
+                    <label for="destino-3"></label>
+                    <input type="radio" name="destino" id="destino-3" value="praia">Praia
+                    <label for="destino-4"></label>
+                    <input type="radio" name="destino" id="destino-4" value="montanha">Montanha
+                </div>
+
+                <div class="form-group">
+                    <label for="text-area" >
+                        <span class="bold">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</span>
+                    </label>
+                    <br>
+                    <textarea name="" id="text-area" cols="50" rows="10" maxlength="500" class="form-control"></textarea>         
+                </div>
+
+                <div class="form-group">
+                    <label for="data-viagem"><span class="bold">Data:</span></label>
+                    <input type="date" name="" id="data-viagem" class="form-control">
+                </div>
+
+                <div id="checks" class="form-group">
+                    <label for="check-oport"></label>
+                    <input type="checkbox" name="check" id="check-oport">Gostaria de receber outras incríveis oportunidades oferecidas pela TrybeTrip?
+
+                    <label for="check-divul"></label>
+                    <input type="checkbox" name="check" id="check-divul">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+                </div>
+
+            </div>
+
+            <div id="botoes" class="form-group">
+                <button type="submit" id="botao-enviar" class="btn btn-success">Enviar</button>
+                <button type="reset"  id="botao-apagar" class="btn btn-danger">Apagar</button>
+            </div>
+
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
