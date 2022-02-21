@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>TrybeTrip</h1>
+    </header>
+
+    <section id="form">
+        <form action="" method="get">
+            <div id="campos">
+
+                <div id="nome-email">
+                    <label for="nome-usuario"><span class="bold">Nome:</span>
+                        <input type="text" name="" minlength="10" maxlength="40" id="nome-usuario" autofocus>
+                    </label>
+                    <label for="email-usuario"><span class="bold">Email:</span>
+                        <input type="email" name="" minlength="10" maxlength="50" id="email-usuario">
+                    </label>
+                </div>
+
+                <div id="destinos">
+                    <span class="bold">Destino Preferido:</span>
+                    <label for="destino-1">
+                        <input type="radio" name="destino" id="destino-1" value="cidade">Cidade
+                    </label>
+                    <label for="destino-2">
+                        <input type="radio" name="destino" id="destino-2" value="campo">Campo
+                    </label>
+                    <label for="destino-3">
+                        <input type="radio" name="destino" id="destino-3" value="praia">Praia
+                    </label>
+                    <label for="destino-4">
+                        <input type="radio" name="destino" id="destino-4" value="montanha">Montanha
+                    </label>
+                </div>
+
+                <div>
+                    <label for="text-area">
+                        <span class="bold">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</span>
+                    </label>
+                    <br>
+                    <textarea name="" id="text-area" cols="50" rows="10" maxlength="500"></textarea>         
+                </div>
+
+                <div>
+                    <label for="data-viagem"><span class="bold">Data:</span>
+                        <input type="date" name="" id="data-viagem">
+                    </label>
+                </div>
+
+                <div id="checks">
+                    <label for="check-oport">
+                        <input type="checkbox" name="check" id="check-oport">Gostaria de receber outras incríveis oportunidades oferecidas pela TrybeTrip?
+                    </label>
+
+                    <label for="check-divul">
+                            <input type="checkbox" name="check" id="check-divul">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+                    </label>
+                </div>
+
+            </div>
+
+            <div id="botoes">
+                <button type="submit" id="botao-enviar">Enviar</button>
+                <button type="reset"  id="botao-apagar">Apagar</button>
+            </div>
+
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
