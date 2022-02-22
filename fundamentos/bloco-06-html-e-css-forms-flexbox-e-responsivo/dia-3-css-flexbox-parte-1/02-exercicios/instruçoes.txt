@@ -1,0 +1,2 @@
+projeto está criado na pasta de projetos.
+Clonei um repositório e não quero misturar com esse repositorio, que já tem um git
