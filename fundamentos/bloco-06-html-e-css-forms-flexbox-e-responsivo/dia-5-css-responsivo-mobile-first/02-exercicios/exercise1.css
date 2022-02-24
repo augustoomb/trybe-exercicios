@@ -1,0 +1,71 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+    box-sizing: border-box; 
+    /* quando eu incluo um padding, ele vai ser incluido no tamanho original na caixa e não um
+    valor a mais*/
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+@media screen and (min-width:470px){
+    body {
+        font-size: large;
+        margin: 2%;
+        background-color: aquamarine;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    figure {
+        margin: 20px !important;
+    }
+
+}   
+
+@media screen and (min-width:800px){
+    section {
+        display: flex;
+        background-color: brown;
+        justify-content: center;
+        max-width: 85%;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}
+  
+  article {
+  
+  }
+  
+  
+  
+  h2 {
+  
+  }
+  
+  img {
+      max-width: 100%;
+  }
+  
+  main {
+  
+  }
+  
+  section {
+  
+  }
+  
+  figure {
+      margin: 0;
+  }
+  
+  figcaption {
+    font-size: .8em;
+  }
