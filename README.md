@@ -43,7 +43,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-4: _JavaScript - Web Storage_
 - [X] 5-5: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-020-b-project-pixels-art/tree/augusto-barbosa-project-pixels-art)_
 - [X] 5-6: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-020-b-project-todo-list/tree/augusto-barbosa-todo-list-project)_
-- [X] ---: _[Bônus   - Jogo da Velha]()_
+- [X] ---: _[ Bônus   - Jogo da Velha](https://github.com/augustoomb/trybe-projetos-bonus/tree/main/dojo-jogo-da-velha-fundamentos-5.4)_
 
 ##### Bloco 6: HTML & CSS avançado
 
