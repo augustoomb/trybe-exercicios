@@ -61,9 +61,38 @@ const books = [
     },
   ];
   
-  //  Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+
+
   
-  const testarNascMesmoAno = (book) => {
+  //  Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+
+
+  //Minha resolução
+
+
+  const testarNascimentosIguaisDeAutoresDiferentes = (arrBooks) => {
+
+    const testarNascimentos = (book) => {
+
+      const buscarUmaDataeNomeIgual = (bookFind) => bookFind.author.birthYear === book.author.birthYear && bookFind.author.name !== book.author.name;
+  
+      return arrBooks.find(buscarUmaDataeNomeIgual) ? true : false
+    }
+  
+    return !arrBooks.some(testarNascimentos); //se pelo menos 1 par de autores bater, retorna false
+  }
+
+  console.log(testarNascimentosIguaisDeAutoresDiferentes(books));
+
+
+
+  //---------------------------------------------
+
+
+
+  //resolução similar ao do gabarito:
+  
+  /*const testarNascMesmoAno = (book) => {
 
     const outraFuncao = (bookSome) => (bookSome.author.birthYear === book.author.birthYear) && (bookSome.author.name !== book.author.name)
 
@@ -73,6 +102,6 @@ const books = [
 
   const boolNascMesmoAno = books.every(testarNascMesmoAno);
 
-  console.log(boolNascMesmoAno);
+  console.log(boolNascMesmoAno);*/
 
   
