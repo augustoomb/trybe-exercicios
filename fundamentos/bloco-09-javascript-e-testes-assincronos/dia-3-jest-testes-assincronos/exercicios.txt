@@ -1,0 +1,5 @@
+Hoje os exercicios estão em dois repositórios:
+
+https://github.com/augustoomb/exercise-magic-card/tree/exercise-two
+
+https://github.com/augustoomb/9.3-content-async-test
