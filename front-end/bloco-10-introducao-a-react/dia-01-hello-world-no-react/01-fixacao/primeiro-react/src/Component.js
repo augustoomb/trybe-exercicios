@@ -5,10 +5,12 @@ class MeuComponente extends React.Component {
   render() {
     const nome = 'Augusto Barbosa';
     const descricao = 'Sou o Augusto Barbosa, estudante de desenvolvimento web na Trybe!'
-    return <div>
+    return (
+      <div>
         <h1>{ nome }</h1>
         <p>{ descricao }</p>
       </div>
+    )
   }
 }
 
