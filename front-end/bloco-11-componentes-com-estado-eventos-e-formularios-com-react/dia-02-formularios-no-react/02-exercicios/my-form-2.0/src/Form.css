@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset-dados-pessoais {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
