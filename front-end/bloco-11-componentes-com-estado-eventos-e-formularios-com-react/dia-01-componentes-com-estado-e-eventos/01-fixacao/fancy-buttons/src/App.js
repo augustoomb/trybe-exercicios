@@ -18,6 +18,11 @@ import React from 'react';
    obs: É importante lembrar que você não pode usar o this em um construtor até que você tenha chamado
     o construtor da classe pai (usando o super()), o JavaScript não vai te deixar fazer isso. Então, por hora,
     apenas lembre-se que para usar o this dentro do constructor() é preciso chamar o super() antes.
+
+    obs2: Se eu tivesse chamado a função printConsoleLog apenas da forma que eu chamei no onClick do botão teste parâmetro (usando arrow func),
+    eu não precisaria usar a linha de bind no construtor.
+
+    Mas como eu optei por chamar essa mesma função no onclick do outro botão sem usar arrow function, preciso usar a linha de bind
 */
 
 
