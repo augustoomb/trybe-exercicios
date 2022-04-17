@@ -1,5 +1,4 @@
 import React from 'react';
-import Joke from './Joke';
 
 class DadJoke extends React.Component {
   constructor() {
@@ -7,11 +6,94 @@ class DadJoke extends React.Component {
 
     this.saveJoke = this.saveJoke.bind(this);
     this.renderJokeElement = this.renderJokeElement.bind(this);
-
+    
     this.state = {
-      jokeObj: undefined, // piada atual
+      jokeObj: undefined,
       loading: true,
-      storedJokes: [], // todas as piadas
+      storedJokes: [],
+    }
+  }
+
+  // Dica setState: Há 3 formas:
+  //- A 1ª e mais simples: só coloco: this.setState e passa o obj
+  //- A 2ª tipo a 1ª, mas recebo o estado anterior como param. Tem ex em codigo e aula ao vivo
+  //- A 3ª é a abaixo. 2 parametros
+
+  async fetchJoke() {
+    this.setState(
+      { loading: true }, // o set state é assincrono. Por isso, enquanto o 'salvamento' de fato do loanding como 'true' lá no state não for completado, o segundo parametro(bloco abaixo) não vai ser executado
+      async () => {
+        const requestHeaders = { headers: { Accept: 'application/json' } }
+        const requestReturn = await fetch('https://icanhazdadjoke.com/', requestHeaders) // retorno é uma promisse, ou seja, requestReturn é uma promisse
+        const requestObject = await requestReturn.json(); // obj javascript com o retorno da requisição
+        this.setState({
+          loading: false,
+          jokeObj: requestObject,
+        })
+      }
+    )    
+  }
+
+  componentDidMount() {
+    this.fetchJoke();
+  }
+
+  saveJoke() {
+    // this.setState(({ storedJokes, jokeObjs }) => ({ storedJokes: [...storedJokes, jokeObj] })  "destructuring"
+    this.setState((prevState) => ({
+      storedJokes: [...prevState.storedJokes, this.state.jokeObj]
+    }));
+
+    this.fetchJoke();
+  }
+
+  renderJokeElement() {
+    return(
+      <div>
+        <p>{ this.state.jokeObj.joke }</p>
+        <button type="button" onClick={ this.saveJoke }>
+          Salvar piada!
+        </button>
+      </div>
+    );
+  }
+
+  render() {
+    const { storedJokes } = this.state; // não precisaria se eu usasse a linha com o map comentado
+    const loadingElement = <span>Loading...</span>;
+
+    return (
+      <div>
+        <span>
+          {/*{this.state.storedJokes.map((joke) => (<p key={joke.id}>{joke.joke}</p>))} */}
+          {storedJokes.map(({ id, joke }) => (<p key={id}>{joke}</p>))}
+        </span>
+
+        { this.state.loading ? loadingElement : this.renderJokeElement() }
+      </div>
+
+      
+    )
+  }
+}
+
+export default DadJoke;
+
+//Se eu renderizar se condicional e o valor de algum state for undefined, vai dar pau pra renderizar
+
+
+
+/* 
+
+import React from 'react';
+import Joke from './Joke';
+
+class DadJoke extends React.Component {
+  constructor() {
+    super();
+    
+    this.state = {
+      piada: 'minha piada'
     }
   }
 
@@ -72,13 +154,7 @@ class DadJoke extends React.Component {
         </span>
 
       {
-        /*
-        Aqui vamos construir nossa lógica com uma renderização condicional
-        do nosso componente Joke, a ideia é renderizar um loading enquanto
-        esperamos a nossa requisição de piadas finalizar.
-
-        <p>RENDERIZAÇÃO CONDICIONAL</p>
-        */
+        
         <p>
           {
             loading
@@ -94,3 +170,5 @@ class DadJoke extends React.Component {
 }
 
 export default DadJoke;
+
+*/
