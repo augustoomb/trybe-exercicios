@@ -32,7 +32,7 @@ const reducer = (state = ESTADO_INICIAL, action) => { // está sempre ouvindo se
 // Note, acima, que o reducer retorna todo o estado, e não somente o que será modificado. 
 // Retornamos, então, um objeto que contém todos os dados atuais do estado { ...state } mais as chaves que serão modificadas pela action! 
 
-// Uma store só funciona se passarmos uma função que será responsável por alterar os dados dela: O reducer
+// 1º) Uma store só funciona se passarmos uma função que será responsável por alterar os dados dela: O reducer
 const store = Redux.createStore(reducer); // criando store
 
 // Conseguimos mudar o estado da store utilizando o dispatch. Ele despacha nossa action para dentro do reducer
