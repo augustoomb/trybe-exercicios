@@ -5,7 +5,7 @@ export const saveProfessionalForm = (objProForm) => ({
   descricao: objProForm.descricao,
 });
 
-// ao ser chamada, o reducer detecta e interage com o store
+// ao ser chamada(action), o reducer detecta e interage com o store
 export const savePersonalForm = (objPersonalForm) => ({
   type: 'SAVE_PERSONAL_FORM',
   nome: objPersonalForm.nome,
