@@ -11,7 +11,7 @@ export const getPicture = (data) => ({
 
 
 export function fetchAPI() {
-  // Desenvolva aqui o código da action assíncrona
+  // Desenvolva aqui o código da action assíncrona // função thunk
   return(dispatch) => {
     dispatch(requestAPI());
     return fetch('https://aws.random.cat/meow')
