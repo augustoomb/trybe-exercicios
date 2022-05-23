@@ -1,9 +1,10 @@
 import React from 'react';
 // importe o connect do pacote 'react-redux'
-import { connect } from 'react-redux';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // importe a ação oriunda do thunk
 import './SearchForm.css';
+import { connect } from 'react-redux';
+import { fetchCharacter } from '../actions';
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -16,56 +17,56 @@ class SearchForm extends React.Component {
     this.submitName = this.submitName.bind(this);
   }
 
-handleChange(e) {
-  this.setState({
-    inputText: e.target.value,
-    characterSearched: '',
-  })
-}
+  handleChange(e) {
+    this.setState({
+      inputText: e.target.value,
+      characterSearched: '',
+    })
+  }
 
-submitName(e) {
-  e.preventDefault();
-  const { inputText } = this.state;
+  submitName(e) {
+    e.preventDefault();
+    const { inputText } = this.state;
+    //desestruture a ação do thunk como propriedade aqui
+    const { getCharacter } = this.props;
+    getCharacter(inputText);
 
-  //desestruture a ação do thunk como propriedade aqui
-  const { sendInfo } = this.props;
+    this.setState({
+      inputText: '',
+      characterSearched: inputText,
+    })
+    // insira a action a ser despachada para o thunk
 
-  this.setState({
-    inputText: '',
-    characterSearched: inputText,
-  })
+  }
 
-  // insira a action a ser despachada para o thunk
-  sendInfo(inputText);
-
-}
-
-render() {
-  const { inputText } = this.state;
-  return (
-    <div>
-      <form onSubmit={this.submitName}>
-        <h1>Type a character below:</h1>
-        <input onChange={this.handleChange} 
-        placeholder="Enter Character"
-        value={inputText}
-        />
-        <div className="buttonSection">
-          <button className="submitButton" type="submit" >Search!</button>
-        </div>
-      </form>
-    </div>
-  )
-}
+  render() {
+    const { inputText } = this.state;
+    return (
+      <div>
+        <form onSubmit={this.submitName}>
+          <h1>Type a character below:</h1>
+          <input onChange={this.handleChange}
+            placeholder="Enter Character"
+            value={inputText}
+          />
+          <div className="buttonSection">
+            <button className="submitButton" type="submit" >Search!</button>
+          </div>
+        </form>
+      </div>
+    )
+  }
 };
 
 // mapeie as ações despachadas como propriedade do componente
 const mapDispatchToProps = (dispatch) => ({
-  sendInfo: (name) => dispatch(fetchAPI(name)),
-});
+  getCharacter: (name) => dispatch(fetchCharacter(name))
+})
 
 // conecte as ações despachadas ao redux
-export default connect(null, mapDispatchToProps)(SearchForm);
-
+export default connect(null, mapDispatchToProps)(SearchForm)
 //faça as proptypes da ação oriunda do thunk
 
+SearchForm.propTypes = {
+  getCharacter: PropTypes.func.isRequired
+}
