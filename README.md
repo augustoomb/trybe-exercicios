@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 4-2: _JavaScript - Array e loop For_
 - [X] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [X] 4-4: _JavaScript - Objetos e funções
-- [X] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-020-b-project-playground-functions/tree/augusto-barbosa-playground-functions)_
+- [X] 4-5: _[Projeto - Playground Functions]
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
 
@@ -41,8 +41,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-2: _JavaScript - Trabalhando com elementos_
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
-- [X] 5-5: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-020-b-project-pixels-art/tree/augusto-barbosa-project-pixels-art)_
-- [X] 5-6: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-020-b-project-todo-list/tree/augusto-barbosa-todo-list-project)_
+- [X] 5-5: _[Projeto - Arte com Pixels]
+- [X] 5-6: _[Projeto - Lista de tarefas]
 - [X] ---: _[ Bônus   - Jogo da Velha](https://github.com/augustoomb/trybe-projetos-bonus/tree/main/dojo-jogo-da-velha-fundamentos-5.4)_
 
 ##### Bloco 6: HTML & CSS avançado
@@ -52,7 +52,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-3: _CSS Flexbox - Part 1_
 - [X] 6-4: _CSS Flexbox - Part 2_
 - [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - Trybewarts](https://github.com/tryber/sd-020-b-project-trybewarts/tree/augusto-barbosa-trybewarts)_
+- [X] 6-6: _[Projeto - Trybewarts]()_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
@@ -67,7 +67,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [X] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
 - [X] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [X] 8-5: _[Projeto - Zoo functions]()_
+- [X] 8-5: _[Projeto - Zoo functions](https://github.com/augustoomb/Project-Zoo-Functions)_
 
 ##### Bloco 9: Assincronicidade & Callbacks
 
@@ -106,7 +106,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 14-1: _Testando React com a React Testing Library_
 - [X] 14-2: _Testando React com a React Testing Library - Parte 2_
-- [X] 14-3: _[Projeto - Testes em React]()_
+- [X] 14-3: _[Projeto - Testes em React](https://github.com/augustoomb/project-react-testing-library)_
 
 ##### Bloco 15: Introdução ao Redux
 
@@ -123,10 +123,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 17: React & Context API
 
-- [ ] 17-1: _Context API do React_
-- [ ] 17-2: _React Hooks - useState e useContext_
-- [ ] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [X] 17-1: _Context API do React_
+- [X] 17-2: _React Hooks - useState e useContext_
+- [X] 17-3: _React Hooks - useEffect e Hooks customizados_
+- [X] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
 
 ##### Bloco 18: Projeto Final de Front-end
 
