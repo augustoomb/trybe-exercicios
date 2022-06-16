@@ -106,16 +106,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 14-1: _Testando React com a React Testing Library_
 - [X] 14-2: _Testando React com a React Testing Library - Parte 2_
-- [X] 14-3: _[Projeto - Testes em React](https://github.com/augustoomb/project-react-testing-library)_
+- [X] 14-3: _Testando React com a React Testing Library - Parte 3_
+- [X] 14-4: _[Projeto - Testes em React](https://github.com/augustoomb/project-react-testing-library)_
 
-##### Bloco 15: Introdução ao Redux
+##### Bloco 15: Gerenciamento de estado com Redux
 
 - [X] 15-1: _Introdução ao Redux_
 - [X] 15-2: _React com Redux - Parte 1_
 - [X] 15-3: _React com Redux - Prática_
 - [X] 15-4: _React com Redux - Parte 2_
 - [X] 15-5: _Testes sí­ncronos com React-Redux_
-- [X] 15-6: _[Projeto - Tabela com filtros de dados]()_
+- [X] 15-6: _[Projeto - Trybe Wallet](https://github.com/augustoomb/Trybewallet)_
 
 ##### Bloco 16: Projeto React
 
