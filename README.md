@@ -89,7 +89,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 11-1: _Components com estado_
 - [X] 11-2: _Eventos e formulários no React_
-- [X] 11-3: _[Projeto - Trynfo]
+- [X] 11-3: _[Projeto - Trynfo](https://github.com/augustoomb/project-tryunfo)
 
 ##### Bloco 12: React
 
