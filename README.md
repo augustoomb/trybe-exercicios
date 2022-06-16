@@ -52,14 +52,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-3: _CSS Flexbox - Part 1_
 - [X] 6-4: _CSS Flexbox - Part 2_
 - [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - Trybewarts]()_
+- [X] 6-6: _[Projeto - Trybewarts]
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
 - [X] 7-3: _Testes unitários em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários]
 
 ##### Bloco 8: JavaScript ES6
 
@@ -74,7 +74,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 9-1: _JavaScript Assí­ncrono e Callbacks_
 - [X] 9-2: _Fetch API e async/await_
 - [X] 9-3: _Jest - Testes Assíncronos_
-- [X] 9-4: _[Projeto - Carrinho de Compras]()_
+- [X] 9-4: _[Projeto - Carrinho de Compras]
 
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
@@ -83,13 +83,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 10-1: _'Hello, world!' no React!_
 - [X] 10-2: _Componentes React_
-- [X] 10-3: _[Projeto - Sistema Solar]()_
+- [X] 10-3: _[Projeto - Sistema Solar]
 
 ##### Bloco 11: React
 
 - [X] 11-1: _Components com estado_
 - [X] 11-2: _Eventos e formulários no React_
-- [X] 11-3: _[Projeto - Trynfo]()_
+- [X] 11-3: _[Projeto - Trynfo]
 
 ##### Bloco 12: React
 
@@ -100,38 +100,37 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 13: Metodologias Ágeis
 
 - [X] 13-1: _Metodologias Ágeis_
-- [X] 13-2: _[Projeto - Frontend Online Store]()_
+- [X] 13-2: _[Projeto - Frontend Online Store]
 
 ##### Bloco 14: Testes em React
 
 - [X] 14-1: _Testando React com a React Testing Library_
 - [X] 14-2: _Testando React com a React Testing Library - Parte 2_
-- [X] 14-3: _Testando React com a React Testing Library - Parte 3_
-- [X] 14-4: _[Projeto - Testes em React](https://github.com/augustoomb/project-react-testing-library)_
+- [X] 14-3: _[Projeto - Testes em React](https://github.com/augustoomb/project-react-testing-library)_
 
-##### Bloco 15: Gerenciamento de estado com Redux
+##### Bloco 15: Introdução ao Redux
 
 - [X] 15-1: _Introdução ao Redux_
 - [X] 15-2: _React com Redux - Parte 1_
 - [X] 15-3: _React com Redux - Prática_
 - [X] 15-4: _React com Redux - Parte 2_
 - [X] 15-5: _Testes sí­ncronos com React-Redux_
-- [X] 15-6: _[Projeto - Trybe Wallet](https://github.com/augustoomb/Trybewallet)_
+- [X] 15-6: _[Projeto - Tabela com filtros de dados]
 
 ##### Bloco 16: Projeto React
 
-- [X] 16-1: _[Projeto - Jogo de Trivia]()_
+- [X] 16-1: _[Projeto - Jogo de Trivia]
 
 ##### Bloco 17: React & Context API
 
 - [X] 17-1: _Context API do React_
 - [X] 17-2: _React Hooks - useState e useContext_
 - [X] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [X] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [X] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]
 
 ##### Bloco 18: Projeto Final de Front-end
 
-- [ ] 18-1: _[Projeto - App de Receitas]()_
+- [ ] 18-1: _[Projeto - App de Receitas]
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
@@ -141,75 +140,75 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 20-2: _Encontrando dados em um banco de dados_
 - [ ] 20-3: _Filtrando dados de forma especí­fica_
 - [ ] 20-4: _Manipulando tabelas_
-- [ ] 20-5: _[Projeto - All For One]()_
+- [ ] 20-5: _[Projeto - All For One]
 
 ##### Bloco 21: Bancos de dados relacionais
 
 - [ ] 21-1: _Funções mais usadas no SQL_
 - [ ] 21-2: _Descomplicando JOINs e UNIONs_
 - [ ] 21-3: _Stored Routines & Subqueries_
-- [ ] 21-4: _[Projeto - Vocabulary Booster]()_
+- [ ] 21-4: _[Projeto - Vocabulary Booster]
 
 ##### Bloco 22: Bancos de dados relacionais
 
 - [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
 - [ ] 22-2: _Normalização, Formas Normais e Dumps_
 - [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 22-3: _[Projeto - One For All]()_
+- [ ] 22-3: _[Projeto - One For All]
 
 ##### Bloco 23: Introdução - NoSQL
 
 - [ ] 23-1: _MongoDB - Introdução_
 - [ ] 23-2: _Filter Operators_
-- [ ] 23-3: _[Projeto - Data Flights]()_
+- [ ] 23-3: _[Projeto - Data Flights]
 
 ##### Bloco 24: Updates
 
 - [ ] 24-1: _Updates Simples_
 - [ ] 24-2: _Updates Complexos - Arrays - Parte 1_
 - [ ] 24-3: _Updates Complexos - Arrays - Parte 2_
-- [ ] 24-4: _[Projeto - Commerce]()_
+- [ ] 24-4: _[Projeto - Commerce]
 
 ##### Bloco 25: Aggregation Framework
 
 - [ ] 25-1: _Aggregation Framework - Part 1_
 - [ ] 25-2: _Aggregation Framework - Part 2_
-- [ ] 25-3: _[Projeto - Aggregations]()_
+- [ ] 25-3: _[Projeto - Aggregations]
 
 ##### Bloco 26: Intro - NodeJS
 
 - [ ] 26-1: _NodeJS - Introdução_
 - [ ] 26-2: _NodeJS - Fluxo Assí­ncrono_
 - [ ] 26-3: _NodeJS - Arquitetura_
-- [ ] 26-4: _[Projeto - A CLI of Ice and Fire]()_
+- [ ] 26-4: _[Projeto - A CLI of Ice and Fire]
 
 ##### Bloco 27: NodeJS
 
 - [ ] 27-1: _Express: HTTP com Node.js_
 - [ ] 27-2: _Arquitetura de Software - Introdução ao MVC_
-- [ ] 27-3: _[Projeto - Cookmaster]()_
+- [ ] 27-3: _[Projeto - Cookmaster]
 
 ##### Bloco 28: NodeJS
 
 - [ ] 28-1: _Arquitetura de Software - Camada de Serviço_
 - [ ] 28-2: _Arquitetura web - Rest e Restful_
-- [ ] 28-3: _[Projeto - Store Manager]()_
+- [ ] 28-3: _[Projeto - Store Manager]
 
 ##### Bloco 29: NodeJS
 
 - [ ] 29-1: _NodeJS - JWT - (JSON Web Token)_
 - [ ] 29-2: _NodeJS - Upload de arquivos com Multer_
-- [ ] 29-3: _[Projeto - Cookmaster V2]()_
+- [ ] 29-3: _[Projeto - Cookmaster V2]
 
 ##### Bloco 30: Introdução - Deploy
 
 - [ ] 30-1: _Infraestrutura - Deploy com Heroku_
 - [ ] 30-2: _Deploy - Gerenciadores de Processos_
-- [ ] 30-3: _[Projeto - Stranger Things]()_
+- [ ] 30-3: _[Projeto - Stranger Things]
 
 ##### Bloco 31: Projeto
 
-- [ ] 31-1: _[Projeto - Trybeer]()_
+- [ ] 31-1: _[Projeto - Trybeer]
 
 ##### Bloco 32: Arquitetura de Software
 
@@ -217,17 +216,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
 - [ ] 32-3: _Arquitetura de Software - DDD_
 - [ ] 32-4: _Boas práticas na escrita de testes_
-- [ ] 32-3: _[Projeto - API de Blogs]()_
+- [ ] 32-3: _[Projeto - API de Blogs]
 
 ##### Bloco 33: Sockets
 
 - [ ] 30-1: _Sockets - TCP/UDP & NET_
 - [ ] 30-2: _Sockets - Socket.io_
-- [ ] 30-3: _[Projeto - Webchat]()_
+- [ ] 30-3: _[Projeto - Webchat]
 
 ##### Bloco 34: Projeto
 
-- [ ] 34-1: _[Projeto - Trybeer V2]()_
+- [ ] 34-1: _[Projeto - Trybeer V2]
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
@@ -236,7 +235,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 35-1: _Arquitetura de Computadores_
 - [ ] 35-2: _Arquitetura de redes_
 - [ ] 35-3: _Redes de computadores, ferramentas e segurança_
-- [ ] 35-4: _[Projeto - Explorando os protocolos]()_
+- [ ] 35-4: _[Projeto - Explorando os protocolos]
 
 ##### Bloco 36: Python
 
@@ -244,6 +243,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 35-2: _Testes e Exceções_
 - [ ] 35-3: _Entrada e Saí­da de dados_
 - [ ] 36-4: _Entrada e Saí­da de dados_
-- [ ] 35-5: _[Projeto - Tech news]()_
+- [ ] 35-5: _[Projeto - Tech news]
 
 # [...]
