@@ -1,0 +1,9 @@
+version: '3'
+services:
+  banco:
+    image: mysql
+    restart: on-failure
+    ports:
+      - 1234:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345678

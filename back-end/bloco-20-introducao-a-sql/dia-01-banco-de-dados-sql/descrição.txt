@@ -1,0 +1,5 @@
+fiz um docker-compose bem simples, apenas para testar o mysql.
+Funcionando!
+
+O banco sakila é um banco usado para teste.
+Basta importá-lo no meu workbench
