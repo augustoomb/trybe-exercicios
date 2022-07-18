@@ -130,7 +130,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 18: Projeto Final de Front-end
 
-- [ ] 18-1: _[Projeto - App de Receitas]
+- [X] 18-1: _[Projeto - App de Receitas]
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
