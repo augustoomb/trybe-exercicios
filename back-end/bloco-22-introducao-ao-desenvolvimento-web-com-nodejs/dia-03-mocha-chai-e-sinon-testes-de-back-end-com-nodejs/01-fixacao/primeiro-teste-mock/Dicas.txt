@@ -1,0 +1,11 @@
+RESUMO:
+  -iniciar um projeto npm: npm init
+  -instalar o mocha e o chai no diretório: npm install -D mocha chai
+  -colocar os scripts no package.json:
+      "start": "node index.js",
+      "test": "mocha tests"
+
+  -Criei minha função simples no arquivo calculaSituacao.js
+  -Criei uma pasta tests. Lá dentro coloquei um arquivo. E dentro dele o código de teste.
+
+  -Para rodar o teste (já que eu habilitei no package.json): npm run test ou npm test
