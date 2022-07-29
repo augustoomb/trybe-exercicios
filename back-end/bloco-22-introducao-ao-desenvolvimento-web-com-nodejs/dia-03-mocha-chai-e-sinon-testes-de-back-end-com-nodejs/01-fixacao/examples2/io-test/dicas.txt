@@ -1,0 +1,2 @@
+iniciando: npm init -y
+instalando: npm install --save-dev mocha chai sinon
