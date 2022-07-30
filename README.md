@@ -209,6 +209,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [ ] 27-6: _[Projeto - Trybers and Dragons]
 
 
+# [...]
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
