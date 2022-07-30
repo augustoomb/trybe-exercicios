@@ -20,6 +20,24 @@ gerarNum = () => {
   return Math.floor(Math.random() * 100 + 1);
 }
 
-calcularNumeros(gerarNum(), gerarNum(), gerarNum())
-  .then((resul) => console.log(`O resultado é: ${resul}`))
-  .catch((err) => console.log(`Erro! ${err.message}`));
+// COM THEN/CATCH
+
+// calcularNumeros(gerarNum(), gerarNum(), gerarNum())
+//   .then((resul) => console.log(`O resultado é: ${resul}`))
+//   .catch((err) => console.log(`Erro! ${err.message}`));
+
+// OU...
+
+// COM ASYNC/AWAIT
+
+async function main() {
+  try {
+    const resul = await calcularNumeros(gerarNum(), gerarNum(), gerarNum());
+    console.log(`O resultado é: ${resul}`);
+  } catch (err) {
+    console.log(`Erro! ${err.message}`)
+  }
+}
+
+main();
+

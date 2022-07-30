@@ -28,7 +28,7 @@ function buscarSimpsonPorId(id) {
 }
 
 function main() {
-  buscarSimpsonPorId(30)
+  buscarSimpsonPorId(3)
     .then((person) => console.log(person))
     .catch((err) => console.log(err.message));
 }
