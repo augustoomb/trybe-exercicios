@@ -19,12 +19,12 @@ app.post('/greetings', function (req, res) {
   const { name, age } = req.body;
 
   if (age > 17) {
-    res.status(200).json({
+    return res.status(200).json({
       "message": `Hello, ${name}!`
     })
   }
 
-  res.status(401).json({
+  return res.status(401).json({
     "message": 'Unauthorized'
   })
 })
@@ -36,5 +36,5 @@ app.put('/users/:name/:age', function (req, res) {
 })
 
 app.listen(3001, () => {
-  console.log('Aplicação rodanda na porta 3001')
+  console.log('Aplicação rodando na porta 3001')
 })

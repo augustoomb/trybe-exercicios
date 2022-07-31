@@ -1,70 +1,89 @@
+// IMPORTANDO E INSTANCIANDO O EXPRESS
 const express = require('express');
 const app = express();
 
+
+// CORS
 const cors = require('cors');
 app.use(cors());
 
+
+// BODY PARSER - npm i body-parser
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+// RECURSOS PARA ACESSAR ARQUIVOS
 const fs = require('fs').promises;
-const nomeDoArquivo = 'simpsons.json';
+const arquivo = 'simpsons.json';
 
-app.get('/simpsons', function (req, res) {
-  fs.readFile(nomeDoArquivo, 'utf-8')
-    .then((data) => {
-      const arrSimpsons = JSON.parse(data);
-      return res.status(200).json(arrSimpsons);
-    })
-    .catch((err) => {
-      return res.status(500).json({ message: err.message });
-    })
-});
+// FUNÇÃO PARA LER ARQUIVO DOS SIMPSONS E TRAZER UM ARR COM OS PERSONAGENS
+async function lerArquivoSimpsons() {
+  const data = await fs.readFile(arquivo, 'utf-8');
+  return JSON.parse(data);
+}
 
-app.get('/simpsons/:id', function (req, res) {
-  const { id } = req.params;
+// FUNÇÃO PARA BUSCAR ID EM UM ARRAY DE OBJETOS
+function buscarNoArrayPorId(arr, id) {
+  return arr.find((item) => item.id == id)
+}
 
-  fs.readFile(nomeDoArquivo, 'utf-8')
-    .then((data) => {
-      const arrSimpsons = JSON.parse(data);
-      const simpProcurado = arrSimpsons.find((simp) => simp.id === Number(id));
-      if (simpProcurado) {
-        return res.status(200).json(simpProcurado);
-      }
-      return res.status(404).json({ message: 'simpson not found' });
-      // res.status(200).json(arrSimpsons);
-    })
-    .catch((err) => {
-      res.status(500).json({ message: err.message });
-    })
-});
+async function escreverArrNoArquivo(arr) {
+  await fs.writeFile(arquivo, JSON.stringify(arr));
+}
 
 
-app.post('/simpsons', async function (req, res) {
-  const { id, name } = req.body;
-
-  // EM ANDAMENTO....
-
-  // const arquivo = await fs.readFile(nomeDoArquivo, 'utf-8');
-  // const arrSimpsons = await JSON.parse(arquivo);
-
-  // arrSimpsons.push({
-  //   "id": id,
-  //   "name": name
-  // })
-
-  // try {
-  //   await fs.readFile(nomeDoArquivo, JSON.stringify(arrSimpsons));
-  //   return res.status(200)
-  // } catch (error) {
-  //   return res.status(500)
-  // }
+// 6 - Crie um endpoint GET /simpsons 
+app.get('/simpsons', async (req, res) => {
+  try {
+    const arrSimpsons = await lerArquivoSimpsons()
+    res.status(200).json(arrSimpsons);
+  } catch (error) {
+    res.status(500).json(`Ocorreu um erro: ${error.message}`)
+  }
 })
 
-app.all('*', function (req, res) {
-  return res.status(404).json({ message: `Rota '${req.path}' não existe!` });
-});
+// 7 - Crie um endpoint GET /simpsons/:id 
+app.get('/simpsons/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const arrSimpsons = await lerArquivoSimpsons();
+    const simpProcurado = buscarNoArrayPorId(arrSimpsons, id);
+    if (simpProcurado) {
+      return res.status(200).json(simpProcurado);
+    }
+    return res.status(404).json({ message: 'simpson not found' });
 
+  } catch (error) {
+    res.status(500).json(`Ocorreu um erro: ${error.message}`)
+  }
+})
+
+// Crie um endpoint POST /simpsons
+app.post('/simpsons', async (req, res) => {
+  const { id, name } = req.body;
+  try {
+    const arrSimpsons = await lerArquivoSimpsons()
+    const simpProcurado = buscarNoArrayPorId(arrSimpsons, id);
+    if (!simpProcurado) {
+      arrSimpsons.push({
+        "id": id,
+        "name": name
+      })
+      await escreverArrNoArquivo(arrSimpsons);
+      res.status(204).end(); // Para encerrar a request sem enviar nenhum dado
+    }
+    return res.status(409).json({ message: 'id already exists' });
+  } catch (error) {
+    res.status(500).json(`Ocorreu um erro: ${error.message}`)
+  }
+})
+
+// RETORNANDO MENSAGEM PARA TENTATIVA DE ACESSO A ROTAS INEXISTENTES.
+app.all('*', (req, res) => {
+  return res.status(404).json({ message: `Rota ${req.path}  não existe!` })
+})
+
+// RODANDO A APLICAÇÃO
 app.listen(3001, () => {
-  console.log('Aplicação Simpsons ouvindo na porta 3001');
+  console.log('App simpsons rodando...')
 });
