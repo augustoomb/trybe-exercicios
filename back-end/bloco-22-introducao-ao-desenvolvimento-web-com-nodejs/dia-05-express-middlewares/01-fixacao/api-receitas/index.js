@@ -1,6 +1,6 @@
 /* index.js */
 const express = require('express');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); // sem ele não funciona "req.body"
 const authMiddleware = require('./auth-middleware');
 
 const app = express();
