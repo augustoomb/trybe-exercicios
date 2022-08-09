@@ -1,0 +1,3 @@
+O projeto original, feito no dia anterior abordava o inicio do modelo MSC
+Usava apenas o Model
+Hoje estou implementando o restante(Service e Controller)

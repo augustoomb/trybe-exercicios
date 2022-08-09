@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name": "Jorel",
+		"cpf": "65585985496",
+		"email": "jorel@customer.com"
+	},
+	{
+		"id": 2,
+		"name": "Rick",
+		"cpf": "45285685485",
+		"email": "rick@customer.com"
+	},
+	{
+		"id": 3,
+		"name": "Morty",
+		"cpf": "65723585474",
+		"email": "morty@customer.com"
+	}
+]
