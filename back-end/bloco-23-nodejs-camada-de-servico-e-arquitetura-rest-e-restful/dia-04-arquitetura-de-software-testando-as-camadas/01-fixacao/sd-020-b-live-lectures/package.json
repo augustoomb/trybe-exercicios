@@ -1,0 +1,34 @@
+{
+  "name": "sd-020-b-live-lectures",
+  "version": "1.0.0",
+  "description": "Este repositório armazena os códigos e scripts fornecidos durante as aulas ao vivo pelos especialistas da Trybe.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "mocha tests/**/*$FILE*.test.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-020-b-live-lectures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-020-b-live-lectures/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-020-b-live-lectures#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "joi": "^17.6.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "sinon": "^14.0.0"
+  }
+}
