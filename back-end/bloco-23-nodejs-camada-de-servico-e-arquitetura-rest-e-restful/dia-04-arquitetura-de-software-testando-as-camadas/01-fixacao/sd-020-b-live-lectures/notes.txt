@@ -1,0 +1,29 @@
+DESAFIO
+
+  Construa uma api que simula a compra e venda de bitcoins. As compras e vendas devem ser realizadas somente em Reais, ou seja, é necessário informar uma quantidade em BRL do valor que deseja adquirir em BTC, realizar o cálculo para obter a fração equivalente e persistir em um banco de dados.
+
+  ORIENTAÇÕES:
+  - Para consultar o valor atualizado de compra e de venda de BTC, é recomendado o uso da API externa do Mercado Bitcoin.
+  - Os parâmetros que serão transacionados e exibido nas requisições da api, tanto em BTC quanto em BRL, devem ser tratados com sua precisão decimal recomendada (2 casas para reais e 8 casas para bitcoin), porém, para persistir no banco de dados, deve se utilizar a menor unidade de medida para evitar problemas de arredondamento.
+  - Será necessário somente 1 tabela de banco de dados que ficará responsável por registrar as entradas e saídas de BRL e BTC. as entradas devem ser consideradas "deposit" e as saídas "withdraw", registrando valores positivos e negativos, respectivamente para essas transações.
+  - Ao realizar uma transação de compra de BTC, é necessário registrar um saque do valor em BRL informado e também um deposito do valor em BTC equivalente. É importante verificar se existe saldo suficiente em BRL para realizar a compra. 
+  - Para realizar uma venda de BTC, é necessário informar um quantidade em BRL para obter a quantidade de BTC que será vendida. O valor em BTC deve ser registrado como saque e o valor em BRL como deposito. É importante verificar se existe saldo suficiente em BTC para realizar a venda.
+
+MODELS
+  - Tabela Transactions
+    [x] Criar tabela com os campos id, coin, amount, type, createdAt;
+    [x] Criar conexão de banco de dados;
+    [x] Criar métodos para consultar saldo em BTC, BRL e realizar uma transação;
+
+INTEGRATIONS
+  - Criar integração com mercado bitcoin 
+    [x] Implementar API que consulta preço do BTC
+
+SERVICES
+  - Criar serviço de compra e venda (trade)
+    [x] Criar métodos que compra e vende bitcoins.
+
+CONTROLLERS
+  - Criar rotas que consomem os métodos de service 
+    [x] Criar endpoint POST que realiza compra de BTC em BRL 
+    [x] Ciar endpoint POST que realiza venda de BTC a partir de uma quantidade de BRL
