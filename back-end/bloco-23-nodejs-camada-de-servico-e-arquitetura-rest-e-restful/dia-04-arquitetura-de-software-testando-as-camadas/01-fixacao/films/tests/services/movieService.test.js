@@ -48,7 +48,6 @@ describe('Insere um novo filme no BD', () => {
         .resolves({ id: ID_EXAMPLE });
     });
 
-    // Restauraremos a função `create` original após os testes.
     after(() => {
       MoviesModel.create.restore();
     });
