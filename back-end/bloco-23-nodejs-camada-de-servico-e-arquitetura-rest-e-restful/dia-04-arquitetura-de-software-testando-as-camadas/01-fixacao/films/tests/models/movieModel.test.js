@@ -18,7 +18,6 @@ describe('Insere um novo filme no BD', () => {
     sinon.stub(connection, 'execute').resolves(execute);
   });
 
-  // Restauraremos a função `execute` original após os testes.
   after(async () => {
     connection.execute.restore();
   });
