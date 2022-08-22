@@ -159,22 +159,22 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 22: Introdução ao desenvolvimento web com Node.js
 
-- [ ] 22-1: _Introdução ao Node.js_
-- [ ] 22-1: _Node.js: Um motor JavaScript_
-- [ ] 22-2: _Node.js: Fluxo assíncrono_
-- [ ] 22-3: _Mocha, Chai e Sinon - Testes de Back-End com Node.js_
-- [ ] 22-4: _Express - HTTP com Node.js_
-- [ ] 22-5: _Express - Middlewares_
-- [ ] 22-6: _[Projeto - Talker Manager]
+- [X] 22-1: _Introdução ao Node.js_
+- [X] 22-1: _Node.js: Um motor JavaScript_
+- [X] 22-2: _Node.js: Fluxo assíncrono_
+- [X] 22-3: _Mocha, Chai e Sinon - Testes de Back-End com Node.js_
+- [X] 22-4: _Express - HTTP com Node.js_
+- [X] 22-5: _Express - Middlewares_
+- [X] 22-6: _[Projeto - Talker Manager]
 
 ##### Bloco 23: Node.js Camada de Serviço e Arquitetura Rest e Restful
 
-- [ ] 23-1: _Introdução - Arquitetura de Software_
-- [ ] 23-1: _Arquitetura de Software - Camada de Model_
-- [ ] 23-2: _Arquitetura de Software - Camada de Controller e Service_
-- [ ] 23-3: _Arquitetura Web - Rest e Restful_
-- [ ] 23-4: _Arquitetura de Software - Testando as Camadas_
-- [ ] 23-5: _[Projeto - Store Manager]
+- [X] 23-1: _Introdução - Arquitetura de Software_
+- [X] 23-1: _Arquitetura de Software - Camada de Model_
+- [X] 23-2: _Arquitetura de Software - Camada de Controller e Service_
+- [X] 23-3: _Arquitetura Web - Rest e Restful_
+- [X] 23-4: _Arquitetura de Software - Testando as Camadas_
+- [X] 23-5: _[Projeto - Store Manager]
 
 ##### Bloco 24 - Node.js: ORM e Autenticação
 
