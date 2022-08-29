@@ -255,4 +255,29 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [ ] 34-3: _Padrões - Decorator, Observer, Factory_
 - [ ] 34-4: _[Projeto - Relatórios de Estoque]
 
-# [...]
+##### Bloco 35: Redes de Raspagem de Dados
+
+- [ ] 35-1: _Arquitetura de redes, ferramentas e segurança_
+- [ ] 35-2: _Raspagem de dados_
+- [ ] 35-3: _[Projeto - Tech news]
+
+##### Bloco 36: Redes de Raspagem de Dados
+
+- [ ] 36-1: _Complexidade de algoritmos_
+- [ ] 36-2: _Recursividade e Estratégias para a solução de problemas_
+- [ ] 36-3: _Algoritmos de ordenação e busca_
+- [ ] 36-4: _[Projeto - Algoritmos]
+
+##### Bloco 37: Redes de Raspagem de Dados
+
+- [ ] 37-1: _Arquitetura de computadores_
+- [ ] 37-2: _Arrays_
+- [ ] 37-4: _Nó e listas encadeadas_
+- [ ] 37-4: _Pilhas e Filas_
+- [ ] 37-5: _[Projeto - TING - Trybe Is Not Google]
+
+##### Bloco 38: Redes de Raspagem de Dados
+
+- [ ] 38-1: _Hashmap e Dict_
+- [ ] 38-2: _Set_
+- [ ] 38-3: _[Projeto - Restaurant Orders]
