@@ -178,12 +178,12 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 24 - Node.js: ORM e Autenticação
 
-- [ ] 24-1: _Introdução - Node.js: ORM e Autenticação_
-- [ ] 24-1: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 24-2: _ORM - Associations_
-- [ ] 24-3: _JWT - (JSON Web Token)_
-- [ ] 24-4: _Testando APIs com Testes de Integração_
-- [ ] 24-5: _[Projeto - API de Blogs]
+- [X] 24-1: _Introdução - Node.js: ORM e Autenticação_
+- [X] 24-1: _ORM - Interface da aplicação com o banco de dados_
+- [X] 24-2: _ORM - Associations_
+- [X] 24-3: _JWT - (JSON Web Token)_
+- [X] 24-4: _Testando APIs com Testes de Integração_
+- [X] 24-5: _[Projeto - API de Blogs]
 
 ##### Bloco 25 - Deployment
 
@@ -199,7 +199,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [ ] 26-3: _Express com TypeScript_
 - [ ] 26-4: _[Projeto - Trybe Smith]
 
-##### Bloco 27 - TypeScript
+##### Bloco 27 - Programação Orientada a Objetos (POO) e SOLID
 
 - [ ] 27-1: _Introdução à Orientação a Objetos_
 - [ ] 27-2: _Herança e Interfaces_
@@ -208,8 +208,35 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [ ] 27-5: _SOLID - Princípios L e I_
 - [ ] 27-6: _[Projeto - Trybers and Dragons]
 
+##### Bloco 28 - Projeto - TFC - Trybe Futebol Clube
 
-# [...]
+- [ ] 28-1: _Projeto - TFC - Trybe Futebol Clube_
+
+##### Bloco 29: Introdução ao MongoDB
+
+- [ ] 29-1: _Introdução -NoSQL_
+- [ ] 29-1: _MongoDB - Introdução_
+- [ ] 29-2: _Filter Operators_
+- [ ] 29-3: _Operadores de Consulta_
+- [ ] 29-4: _Updates Simples_
+- [ ] 29-5: _Updates Complexos - Arrays_
+- [ ] 29-6: _[Projeto - Commerce]
+
+##### Bloco 30 - MongoDB com Node.js e POO
+
+- [ ] 30-1: _Mongoose e arquitetura MSC(camada Model)_
+- [ ] 30-2: _Mongoose e arquitetura MSC(camada Service e Controller)_
+- [ ] 30-3: _[Projeto - Car Shop]
+
+##### Bloco 31 - Projeto - App de Delivery
+
+- [ ] 31-1: _[Projeto - App de Delivery]
+
+##### Bloco 32 - MasterClass - VPS, CI/CD
+
+- [ ] 32-1: _VPS_
+- [ ] 32-2: _--_
+
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
