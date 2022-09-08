@@ -1,0 +1,31 @@
+// "use strict"
+
+function soma(a, b) {
+  console.log(a + b);
+}
+
+soma(2, 2);
+soma("2", "2");
+
+let length = 10;
+let public = 10;
+
+// lenght = 20
+
+console.log(length);
+console.log(public);
+
+const mundoInvertido = process.env.BOOLEAN
+
+console.log([mundoInvertido, true === mundoInvertido]);
+
+
+// function cadastrarPessoa(pessoa) {
+//   Pessoa.create({ nomecompleto: pessoa.nome })
+// }
+
+// cadastrarPessoa({ nomecompleto: 'Andre'})
+
+console.log(typeof mundoInvertido);
+console.log(typeof {});
+console.log(typeof NaN);

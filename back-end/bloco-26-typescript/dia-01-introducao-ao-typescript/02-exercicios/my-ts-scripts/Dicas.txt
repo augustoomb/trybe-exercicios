@@ -1,0 +1,21 @@
+mkdir my-ts-scripts && cd my-ts-scripts
+
+npm init -y
+
+npm install -D @tsconfig/node16 @types/node typescript
+
+touch tsconfig.json
+
+      // ./tsconfig.json
+      {
+        "extends": "@tsconfig/node16/tsconfig.json", // estendemos a configuração base para o Node 16
+        "compilerOptions": {
+          "outDir": "./dist", // pasta onde nossos arquivos compilados serão salvos
+        },
+      }
+
+criar meus arquivos ts
+
+npx tsc
+
+node exercise1.js
