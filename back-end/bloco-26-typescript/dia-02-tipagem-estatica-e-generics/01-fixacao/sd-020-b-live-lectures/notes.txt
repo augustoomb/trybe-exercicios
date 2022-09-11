@@ -1,0 +1,4 @@
+[x] Revisão
+[x] Type Alias | Interface | Class
+[x] Generics
+[x] Mini API
