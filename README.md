@@ -187,17 +187,17 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 25 - Deployment
 
-- [ ] 25-1: _Introdução - Deploy_
-- [ ] 25-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 25-2: _Deploy Docker & Heroku_
-- [ ] 25-3: _[Projeto - Stranger Things]
+- [X] 25-1: _Introdução - Deploy_
+- [X] 25-1: _Infraestrutura - Deploy com Heroku_
+- [X] 25-2: _Deploy Docker & Heroku_
+- [X] 25-3: _[Projeto - Stranger Things]
 
 ##### Bloco 26 - TypeScript
 
-- [ ] 26-1: _Introdução - TypeScript_
-- [ ] 26-2: _Tipagem Estática e Generics_
-- [ ] 26-3: _Express com TypeScript_
-- [ ] 26-4: _[Projeto - Trybe Smith]
+- [X] 26-1: _Introdução - TypeScript_
+- [X] 26-2: _Tipagem Estática e Generics_
+- [X] 26-3: _Express com TypeScript_
+- [X] 26-4: _[Projeto - Trybe Smith]
 
 ##### Bloco 27 - Programação Orientada a Objetos (POO) e SOLID
 
