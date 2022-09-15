@@ -1,0 +1,2736 @@
+DIA 01 - INTRODUÇÃO AO TYPESCRIPT
+
+    Introdução (O que é TypeScript?)
+
+        TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. Ela é um superconjunto (superset) do JavaScript, isso significa que você poderá continuar utilizando todo o conhecimento adquirido até agora em JavaScript para desenvolver em TypeScript. Isso é sensacional, não é? 
+
+        Especificamente, o TypeScript é um superconjunto do ECMAScript 2015, mais comumente denominado ECMAScript 6 ou ES6. Sendo assim, todo o código JavaScript também é código TypeScript, e um programa desenvolvido em TypeScript pode consumir o JavaScript de forma direta.
+
+    
+    Por que a linguagem TypeScript foi criada?
+
+        JavaScript é, hoje, a linguagem oficial da Web, sendo utilizada para criar aplicações multiplataforma que rodam tanto no navegador quanto em servidores, e até mesmo em dispositivos mobile e IoT (Internet of Things - internet das coisas). No entanto, ela tem uma limitação: não foi concebida para a criação de aplicativos envolvendo milhares ou até mesmo milhões de linhas de código, pois ela não possui alguns dos recursos presentes em outras linguagens.
+
+        A linguagem TypeScript foi desenvolvida justamente para resolver as limitações do JavaScript, sem prejudicar sua capacidade de executar código em todas as plataformas. 
+
+
+    
+    Tipagem (dicas de tipo)
+
+        O grande recurso do TypeScript é o sistema de tipos. Em TypeScript podemos identificar o tipo de dado em variáveis, parâmetros ou retornos de funções utilizando a tipagem.
+    
+        Tipagem, também conhecida como dicas de tipos, é a forma que utilizamos para descrever de qual tipo será o valor de um componente do nosso código - por exemplo: variáveis, expressões, funções ou módulos. Isso proporciona uma melhor documentação do código e permite que o TypeScript valide se ele está funcionando da maneira correta.    
+
+        Antes de avançarmos para como o TypeScript faz isso, vamos falar um pouco mais sobre tipagem em linguagens de programação.
+
+        Podemos categorizar a tipagem em uma linguagem de programação como:
+        
+            -> Tipagem Estática: Não permite que a pessoa desenvolvedora altere o tipo após ele ser declarado e, geralmente, a verificação de tipo é feita em tempo de compilação. ✅ A tipagem utilizada na linguagem TypeScript tem essa característica e vamos aprender sobre o seu compilador mais à frente.
+        
+            -> Tipagem Dinâmica: Está ligada à habilidade da linguagem de programação em “escolher o tipo de dado” de acordo com o valor atribuído à variável em tempo de execução - ou seja, de forma dinâmica. ❌ Não há essa característica na tipagem do TypeScript.
+
+            -> Tipagem Forte: Linguagens fortemente tipadas não realizam conversões automaticamente. Melhor dizendo, não é possível realizar operações entre valores de diferentes tipos, sendo necessário que a pessoa desenvolvedora faça a conversão para um dos tipos, caso seja possível. ✅ A tipagem utilizada na linguagem TypeScript também possui essa característica.
+
+            -> Tipagem Fraca: A tipagem fraca tem a característica da linguagem de realizar conversões automáticas entre tipos diferentes de dados - ou melhor, operações entre valores de tipos diferentes podem ocorrer sem a necessidade de uma conversão explícita de tipo. Porém, o resultado pode não ser o esperado e erros podem ocorrer durante a execução. ❌ Não há essa característica na tipagem do TypeScript.
+
+
+            RESUMO:
+
+                Estática	Não permite que a pessoa desenvolvedora altere o tipo após ele ser declarado.
+
+                Dinâmica	A linguagem de programação “escolhe" o tipo de dado a partir do valor atribuído à variável em tempo de execução.
+
+                Fraca	Tipagem fraca tem a característica da linguagem realizar conversões automáticas entre tipos diferentes de dados.
+
+                Forte	Linguagens fortemente tipadas não realizam conversões automaticamente.
+
+
+
+    Inferência de tipo:
+
+        Algumas linguagens com tipagem estática podem fazer a inferência de tipo na declaração de variáveis, mas sem permitir que o tipo seja alterado após a declaração.
+
+        O TypeScript é uma dessas linguagens. Podemos usar a inferência de tipo, mas o compilador apresenta um erro quando tentamos atribuir um valor de tipo diferente à variável. Isso porque ele apenas realiza a inferência do tipo inicial da variável. Depois disso, como a linguagem possui tipagem estática, não é possível alterar o tipo.
+
+        Então, TypeScript é uma linguagem fortemente tipada e estaticamente tipada que possui inferência de tipo. Veremos exemplos disso quando começarmos a escrever nossas primeiras linhas de código nas seções a seguir
+
+        Antes disso, vamos falar sobre Transpiladores e Compiladores, e sobre o TSC, que é o compilador do TypeScript.
+
+
+
+
+
+    -----------------------------------------------------------------------------------------------------------
+
+    Diferença entre Compilador e Transpilador
+
+        Um Compilador é um programa que traduz o código desenvolvido usando uma linguagem de mais alto nível (mais próxima dos seres humanos) em um código de um programa equivalente de uma linguagem de mais baixo nível (mais próxima do processador). Como exemplo temos o GCC da Linguagem C e o Javac da linguagem Java.
+
+        Um Transpilador é um programa de sistema que traduz o código desenvolvido utilizando uma linguagem de mais alto nível em um código de um programa equivalente de uma outra linguagem de mais alto nível ou em uma versão diferente da mesma linguagem. Como exemplo, temos o J2CL que transpila código na linguagem Java para a linguagem JavaScript ou o Babel que transpila código EcmaScript 6 para EcmaScript 5.
+        
+        Um Transpilador também é considerado por algumas pessoas como um tipo de Compilador que atua em um nível mais alto de abstração. Por isso, muitas vezes você verá pessoas dizendo que o TypeScript é uma linguagem transpilada por traduzir código TypeScript em código JavaScript, ambas linguagens de mais alto nível
+
+        No entanto, o Typescript possui um Compilador denominado TSC (TypeScript Compiler), que é responsável por fazer essa tradução. Além disso, a própria documentação da linguagem trata esse processo de tradução do código feito pelo TSC como compilação. Vamos estudar mais sobre ele na próxima seção.
+
+
+
+
+    -----------------------------------------------------------------------------------------------------------
+
+    TSC - TypeScript Compiler
+
+        O TSC é o responsável por realizar a tradução do nosso código TypeScript para código JavaScript.
+
+        Lembra que nas seções anteriores nós estudamos a tipagem em linguagens de programação e descobrimos que o TypeScript é uma linguagem estaticamente tipada e fortemente tipada? O TSC também é o responsável por realizar a verificação de tipo no nosso código TypeScript. Veremos como isso funciona.
+
+        Para isso, podemos instalar o TSC e o suporte ao TypeScript em nossa máquina via npm, e utilizarmos o comando tsc seguido do arquivo que desejamos compilar e realizar a análise de tipo.
+
+        Caso não deseje instalá-lo, você pode utilizar o comando tsc como um executável npx.
+
+        Para instalar o compilador TypeScript globalmente:
+
+                npm install -g typescript
+
+
+        Podemos executá-lo da seguinte forma:
+
+                tsc nomeDoArquivo.ts
+
+
+        OU:
+
+                npx tsc nomeDoArquivo.ts
+        
+
+
+        Obs: A extensão .ts é a extensão padrão para os arquivos TypeScript.
+
+        Ao rodarmos esse comando, será verificado o conteúdo do arquivo nomeDoArquivo.ts e, caso nenhum problema seja encontrado, um novo arquivo será criado com o nome nomeDoArquivo.js e contendo o código compilado para JavaScript. A seguir, podemos rodar o arquivo .js gerado utilizando o Node. Caso haja erro, o compilador apontará uma mensagem de erro no terminal e o arquivo .js não será gerado.
+
+        Para rodar o arquivo gerado utilizando o Node:
+
+                node nomeDoArquivo.js
+
+
+
+    -----------------------------------------------------------------------------------------------------------
+
+    Introdução ao TSConfig
+
+        O que define que um projeto é TypeScript é a presença de um arquivo de configuração TSConfig.
+
+        O arquivo tsconfig.json possui as variáveis de configuração que definirão como o nosso código será compilado.
+
+        Obs: A melhor prática para a utilização do Typescript em um projeto é instalá-lo como uma devDependency por meio do comando npm i -D typescript e utilizá-lo por meio do npx. Isso garante que todas as pessoas que forem compilar o projeto o façam utilizando a mesma versão do TypeScript, e não a versão instalada em suas respectivas máquinas.
+
+        É possível criar manualmente o arquivo tsconfig.json ou, como boas pessoas desenvolvedoras que somos, podemos utilizar as ferramentas que a linguagem nos fornece para gerá-lo automaticamente, já com as principais configurações. Depois, podemos escolher quais queremos utilizar.
+    
+        Para gerar o tsconfig.json vamos utilizar o tsc. Sim, a ferramenta de compilação da linguagem TypeScript também traz essa incrível funcionalidade.
+
+        Entre em um diretório vazio de sua escolha e execute um dos seguintes comandos no terminal.
+
+        Caso tenha instalado o compilador globalmente em sua máquina:
+
+                tsc --init
+
+
+        OU caso queira utilizar o tsc como um executável npx:
+
+                npx tsc --init
+
+
+        Um arquivo tsconfig.json será gerado no diretório com o seguinte conteúdo:
+
+            
+                {
+                  "compilerOptions": {
+                    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+                    /* Projects */
+                    [...]
+                    /* Language and Environment */
+                    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include 
+                    [...]
+
+                    /* Modules */
+                    "module": "commonjs",                                /* Specify what module code is generated. */
+                    "rootDir": "./",                                     /* Specify the root folder within your source files. */
+                    [...]
+
+                    /* JavaScript Support */
+                    [...]
+
+                    /* Emit */
+                    "outDir": "./",                                      /* Specify an output folder for all emitted files. */
+                    [...]
+
+                    /* Interop Constraints */
+                    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules.
+                    [...]
+
+                    /* Type Checking */
+                    "strict": true,                                      /* Enable all strict type-checking options. */
+                    [...]
+                  }
+                }
+
+
+
+        ------
+        Veja que fantástico: o arquivo gerado traz as principais configurações e um comentário à frente de cada linha dizendo o que aquela configuração em específico faz e quais são os valores aceitos. Além disso, para fechar com chave de ouro, também traz uma URL explicando mais sobre o arquivo tsconfig.json.
+
+        Agora, vamos conhecer um pouco mais do que já vem configurado no arquivo tsconfig.json e o que precisamos configurar para criar nosso primeiro projeto em Typescript!
+
+
+            -> module: especifica o sistema de módulo a ser utilizado no código JavaScript que será gerado pelo compilador como sendo o CommonJS;
+
+            -> target: define a versão do JavaScript do código compilado como ES6;
+
+            -> rootDir: define a localização raiz dos arquivos do projeto;
+
+            -> outDir: define a pasta onde ficará nosso código compilado;
+    
+            -> esModuleInterop: habilitamos essa opção para ser possível compilar módulos ES6 para módulos CommonJS;
+
+            -> strict: habilitamos essa opção para ativar a verificação estrita de tipo;
+
+            -> include: essa chave vai depois do objeto CompilerOptions e com ela conseguimos incluir na compilação os arquivos ou diretórios mencionados; 
+
+            -> exclude: essa chave também vai depois do objeto CompilerOptions e com ela conseguimos excluir da compilação os arquivos mencionados.
+
+        
+        Não vamos explicar cada uma das outras configurações. À medida que utilizarmos novas configurações, vamos falar sobre aquelas que escolhemos. Caso queira saber mais, é uma ótima oportunidade para exercitar a aprendizagem ativa acessando o link do arquivo.
+
+        Também podemos utilizar uma configuração base para o ambiente JavaScript (versão do Node) que estamos utilizando provida pela própria equipe de desenvolvimento do TypeScript por meio de um repositório no GitHub. Não existe uma versão base para todos os ambientes JavaScript, apenas para os mais recentes. Com node, é possível utilizar a partir da versão 12.
+
+        Por exemplo, se estivermos desenvolvendo um projeto que usará a versão 16 do Node, podemos utilizar o módulo base @tsconfig/node16.
+
+                npm i -D @tsconfig/node16
+
+
+        Então o tsconfig.json ficaria parecido com isso:
+
+
+                {
+                  "extends": "@tsconfig/node16/tsconfig.json",
+                  "compilerOptions": {
+                    "target": "es2016",                                 
+                    "module": "commonjs",
+                    "rootDir": "./",
+                    "outDir": "./dist",
+                    "preserveConstEnums": true,
+                    "esModuleInterop": true,
+                    "forceConsistentCasingInFileNames": true,
+                    "strict": true,
+                    "skipLibCheck": true
+                  },
+                  "include":["src/**/*"], /* aqui estamos incluindo todos os arquivos dentro da pasta src */
+                  "exclude": ["node_modules", "**/*.spec.ts"] /* aqui estamos excluindo a pasta node_modules e os arquivos de teste */
+                }
+
+
+        Isso permite que nosso tsconfig.json concentre as configurações únicas para o nosso projeto, e não todas as configurações para o nosso ambiente de execução JavaScript.
+
+
+
+
+
+    ------------------------------------------------------------------------------------------------------------
+    TypeScript Playground
+
+        Segundo o time desenvolvedor da ferramenta, o TypeScript Playground é um site feito para você escrever, compartilhar e aprender TypeScript.
+
+        Esse site possui vários recursos interessantes: nele, você pode ver exemplos de programas criados com TypeScript; testar os recursos mais novos do compilador; criar seus próprios programas e compartilhar a URL deles com outras pessoas. O melhor de tudo é que o Playground é um ambiente seguro de aprendizagem, sem o risco do seu código afetar alguma aplicação.
+
+        Você pode acessá-lo neste (https://www.typescriptlang.org/pt/play).
+
+
+
+
+
+    ----------------------------------------------------------------------------------------------------------
+    Tipos e Subtipos
+
+        Vamos falar um pouco mais sobre o grande recurso do TypeScript em relação ao JavaScript: os tipos.
+
+        Em TypeScript, todos os tipos são subtipos de um tipo principal chamado any, e este é um tipo que pode representar qualquer valor em JavaScript. Os demais tipos são os tipos primitivos, tipos de objeto ou parâmetros de tipo.
+
+
+        ----
+        Tipos primitivos:
+        
+            Hoje nós vamos focar em alguns dos tipos primitivos, que são os tipos boolean, number, string, void, null e undefined.
+
+            -> boolean: recebe verdadeiro (true) ou falso (false):
+    
+                let yes: boolean = true; // cria uma variável de nome "yes" e diz que o tipo é boleano e o valor é true
+                let no: boolean = false; // cria uma variável de nome "no" e diz que o tipo é boleano e o valor é false
+                
+            
+            -> number: recebe valores numéricos e, assim como no JavaScript, todos são valores de ponto flutuante.
+    
+                // cria uma variável de nome "x" e diz que o tipo é number mas não seta o valor
+                // isso não funciona com const
+                let x: number;
+
+                let y: number = 0;
+                let z: number = 123.456;
+
+
+            -> string: recebe uma sequência de caracteres armazenados como unidades de código UTF-16 Unicode.
+
+                let s: string;
+                let empty: string = "";
+                let abc: string = 'abc';
+
+
+            -> void: existe apenas para indicar a ausência de um valor, como em uma função sem valor retornado.
+
+                function sayHelloWorld(): void {
+                  console.log("Hello World!");
+                }
+
+
+            -> null e undefined: são subtipos de todos os outros tipos.
+
+                let nullValue = null;
+                let undefinedValue = undefined;
+
+
+
+        ------
+        Exemplo de declaração de variáveis utilizando inferência de tipo
+
+            Como visto antes, podemos utilizar a inferência de tipo no TypeScript. É possível declarar uma variável sem especificarmos explicitamente o tipo e o compilador fará a inferência do tipo por meio do valor definido para a variável:
+
+                let flag = true; // o compilador irá inferir o tipo boolean
+                const numberPI = 3.1416; // o compilador irá inferir o tipo number
+                let message = "Hello World!"; // o compilador irá inferir o tipo string   
+
+
+
+
+    ---------------------------------------------------------------------------------------------------------
+    Enum ou enumeração
+
+        Dedicamos uma seção única para a enum, pois é o primeiro tipo de dado que vamos ver e que não existe no JavaScript!
+
+        Uma enum é um nome simbólico para um conjunto de valores relacionados, o que significa que você pode utilizá-la para criar um conjunto de constantes para uso com variáveis e propriedades.
+
+        Elas são muito úteis quando temos um conjunto de valores que determinado tipo de variável pode assumir.
+
+        Imagine que você tem um campo em um banco de dados externo que representa o status da matrícula de uma pessoa estudante em um curso, chamado StudentStatus, que é do tipo inteiro e pode conter os números 1, 2 ou 3, que representam respectivamente: Active, Inactive e Paused. Vamos criar uma enumeração com esses valores e entendermos como eles funcionam no TypeScript:
+
+
+                enum StudentStatus {
+                     Active,
+                     Inactive,
+                     Paused
+                }
+
+        
+        -----
+        Agora, vamos declarar uma variável para uma nova pessoa estudante do tipo StudentStatus e atribuir o tipo Inactive:
+
+                // referenciamos um enum usando EnumName.Value
+                let newStudentStatus: StudentStatus = StudentStatus.Inactive; 
+                console.log(newStudentStatus); //saída: 1
+
+
+            
+        Opa! Não tivemos a saída esperada, não é mesmo?
+        
+        Por padrão, uma enum é baseada em números. Os valores começam de zero e para cada opção é assinalado um número incrementado por 1, assim como os índices de um array. Portanto, Active é 0, Inactive é 1 e Paused é 2. Para termos a nossa enum refletindo os valores que temos no banco de dados externo, precisamos declarar isso da seguinte forma:
+                
+                enum StudentStatus {
+                     Active = 1,
+                     Inactive,
+                     Paused
+                }
+
+
+
+        Atribuir o número 1 para o primeiro valor da nossa enum já é o suficiente. Agora, quando imprimirmos a nossa variável newStudentStatus o valor será 2 - como era esperado.
+
+                let newStudentStatus: StudentStatus = StudentStatus.Inactive;
+                console.log(newStudentStatus); //saída: 2
+
+
+        Sempre que parte da sua lógica aceitar um conjunto limitado de valores, considere utilizar uma enum. Elas tornam o código mais legível e demonstram melhor a intenção de quem codificou, além de nos ajudar a reduzir os erros causados pela transcrição ou digitação incorreta de valores e facilitar a alterações futuras nos valores.
+
+        Enums suportam o acesso ao dado em ambos as direções: da chave ao valor e do valor à chave:
+
+
+                enum StatusCodes {
+                  OK = 200,
+                  BadRequest = 400,
+                  Unauthorized,
+                  PaymentRequired,
+                  Forbidden,
+                  NotFound,
+                }
+
+                const ok = StatusCodes.OK;
+                const indiceOk = StatusCodes["OK"];
+                const stringBadRequest = StatusCodes[400];
+
+                console.log(ok); //saída: 200
+                console.log(indiceOk); //saída: 200
+                console.log(stringBadRequest); //saída: BadRequest
+
+
+
+        --------
+        Podem ser de diferentes tipos, sendo o tipo string o mais comum:
+        
+                enum directionsGamePad {
+                  UP = "UP",
+                  DOWN = "DOWN",
+                  LEFT = "LEFT",
+                  RIGTH = "RIGHT",
+                }
+
+
+
+
+
+    ---------------------------------------------------------------------------------------------------------
+
+    Primeiro programa em TypeScript
+
+        Agora, escreveremos nosso primeiro programa utilizando o TypeScript. Vamos criar um módulo para calcular a área de figuras geométricas.
+
+        Obs: No final da página, há um vídeo resumindo o que vimos até agora e demonstrando algumas funcionalidades na prática.
+
+        Crie um diretório chamado exercises (chamei de figuras-geometricas-ts). Nele, vamos inicializar nosso projeto TypeScript.
+    
+                mkdir exercises && cd exercises
+
+
+        A seguir, vamos inicializar nosso projeto Node, instalar o módulo npm com a configuração base do TSConfig para o Node 16 (ou superior) e criar nosso tsconfig.json.
+
+
+                npm init -y
+
+                npm install -D @tsconfig/node16
+
+                touch tsconfig.json
+
+                // ./tsconfig.json
+                {
+                  "extends": "@tsconfig/node16/tsconfig.json",
+                  "compilerOptions": {
+                    "target": "es2016",                                 
+                    "module": "commonjs",
+                    "rootDir": "./",
+                    "outDir": "./dist",
+                    "preserveConstEnums": true,
+                    "esModuleInterop": true,
+                    "forceConsistentCasingInFileNames": true,
+                    "strict": true,
+                    "skipLibCheck": true
+                  }
+                }
+
+        ----
+        Por fim, vamos instalar o pacote npm com as definições de tipos para o Node.js.
+            
+                npm install -D @types/node
+
+
+        Em seguida, vamos criar dois arquivos: um chamado index.ts, que usaremos para testar o nosso módulo, e um chamado exercises.ts, onde faremos a implementação do nosso módulo com algumas funções.
+
+                touch index.ts && touch exercises.ts
+        
+
+
+        A primeira função que vamos desenvolver recebe um nome e o imprime na tela com o texto "Olá Nome".
+
+                // ./exercises.ts
+
+                export function greeter(name: string): string {
+                    return `Olá ${name}!`;
+                }
+
+
+
+        A segunda função que vamos desenvolver irá mostrar na tela o nome da pessoa e sua idade.
+
+                // ./exercises.ts
+
+                export function personAge(name: string, age: number): string {
+                    return `${name} tem ${age} anos!`;
+                }
+
+
+
+        A terceira função que vamos desenvolver fará a adição de todos os números que estão dentro de um array. Para isso, faremos uma função add que será chamada dentro da função sumArray, que por sua vez utilizará o método reduce para realizar a soma dos valores.
+
+                // ./exercises.ts
+
+                export function add(x: number, y: number): number {
+                    return x + y;
+                }
+
+                export function sumArray(numbers: number[]): number {
+                    return numbers.reduce(add, 0);
+                }
+
+
+
+        A quarta função que vamos desenvolver será para calcular a área de um triângulo. A fórmula para isso é multiplicar a medida da base pela medida da altura e dividir o resultado por dois.
+
+                // ./exercises.ts
+
+                export function triangle(base: number, height: number): number {
+                    return (base * height) / 2;
+                }
+
+
+
+        A quinta função que vamos desenvolver será para calcular a área de um quadrado. Para calcular isso, multiplicamos a medida da base pela medida da altura. Como as medidas são as mesmas, multiplicá-las é o mesmo que elevar uma delas ao quadrado.
+
+                // ./exercises.ts
+
+                export function square(side: number): number {
+                    return side ** 2;
+                }
+
+
+        A última função que vamos desenvolver será para calcular a área de um retângulo. A área do retângulo é dada pela multiplicação da base pela altura.
+
+                // ./exercises.ts
+            
+                export function rectangle(base: number, height: number): number {
+                    return base * height;
+                }
+
+
+
+        ----
+        Pronto. Agora, vamos fazer algumas chamadas ao nosso módulo de área no arquivo index.ts.
+
+            // ./index.ts
+
+            import * as Exercise from './exercises';
+
+            console.log(Exercise.greeter('Maria'));
+            console.log(Exercise.personAge('Maria', 40));
+            console.log(`A soma do array é igual a ${Exercise.sumArray([3, 6, 9])}`);
+
+            console.log(`Triângulo de base 10cm e altura 25cm: ${Exercise.triangle(10, 25)}cm²`);
+            console.log(`Triângulo de base 5cm e altura 30cm: ${Exercise.triangle(5, 30)}cm²`);
+            console.log(`Triângulo de base 100cm e altura 200cm: ${Exercise.triangle(100, 200)}cm²`);
+
+            console.log(`Quadrado de lado 10cm: ${Exercise.square(10)}cm²`);
+            console.log(`Quadrado de lado 5cm: ${Exercise.square(5)}cm²`);
+            console.log(`Quadrado de lado 100cm: ${Exercise.square(100)}cm²`);
+
+            console.log(`Retângulo de base 10cm e altura 25cm: ${Exercise.rectangle(10, 25)}cm²`);
+            console.log(`Retângulo de base 5cm e altura 30cm: ${Exercise.rectangle(5, 30)}cm²`);
+            console.log(`Retângulo de base 100cm e altura 200cm: ${Exercise.rectangle(100, 200)}cm²`);
+
+
+
+        ---
+        Em seguida, vamos compilar o nosso programa:
+
+            npx tsc
+
+
+        Nossos arquivos JavaScript foram gerados dentro do diretório dist. Agora, basta rodar o nosso programa compilado utilizando o Node.
+
+            node ./dist/index.js
+
+
+        A saída esperada é:
+
+            Olá Maria!
+            Maria tem 40 anos!
+            A soma do array é igual a 18
+            Triângulo de base 10cm e altura 25cm: 125cm²
+            Triângulo de base 5cm e altura 30cm: 75cm²
+            Triângulo de base 100cm e altura 200cm: 10.000cm²
+            Quadrado de lado 10cm: 100cm²
+            Quadrado de lado 5cm: 25cm²
+            Quadrado de lado 100cm: 10.000cm²
+            Retângulo de base 10cm e altura 25cm: 250cm²
+            Retângulo de base 5cm e altura 30cm: 150cm²
+            Retângulo de base 100cm e altura 200cm: 20.000cm²
+
+
+
+====================================================================================================================
+====================================================================================================================
+
+
+
+DIA 02 - TIPAGEM ESTÁTICA E GENERICS
+
+    Tipos de coleção
+
+        -> Arrays
+
+            Arrays são conjuntos de valores de mesmo tipo. Para declará-los, você pode adicionar o tipo esperado do array com a sintaxe let arrayName: type[] = [...];
+
+                let names: string[] = ["Mary Joe", "Alan Joe"];
+
+
+
+        -> Tuplas
+        
+            Tuplas permitem declarar um conjunto de valores cuja ordem e tipo dos valores são fixas. Em JavaScript, elas são representadas como arrays (por isso a semelhança!), mas são estruturas diferentes. Por exemplo, você pode querer representar um valor como um par de uma string e um número. Para declarar uma tupla, use a sintaxe let variableName: [type, type, ...]:
+
+                let fullName: [string, string] = ["Jane", "Doe"];
+                let person: [string, number] = ["Jane Doe", 35];
+                let car: [string, string, number] = ["Ford", "F400", 10];
+
+
+
+
+    --------------------------------------------------------------------------------------------------------
+    Type Aliases
+
+        Type Aliases (apelidos de tipos) são utilizados para declarar a forma de um objeto nomeando o tipo, o que nos permite usar o mesmo tipo mais de uma vez e nos referir a ele através de um único nome. Um type alias é exatamente isso: um nome para qualquer tipo. Para criar um type alias utilizamos a seguinte sintaxe:
+
+                
+                type Point = {
+                  x: number;
+                  y: number;
+                };
+
+
+                function printCoord(pt: Point) {
+                  console.log("O valor da cordenada x é: " + pt.x);
+                  console.log("O valor da coordenada y é: " + pt.y);
+                }
+
+                printCoord({ x: 100, y: 100 });
+                //saída:
+                //O valor da cordenada x é: 100
+                //O valor da cordenada y é: 100
+
+
+
+        Podemos dar um nome a qualquer tipo não apenas a um tipo de objeto.
+
+
+
+
+    --------------------------------------------------------------------------------------------------------
+    Type Unions
+
+        Type Unions (união de tipos) é uma forma de declarar que um objeto é um tipo formado a partir de dois ou mais outros tipos, representando valores que podem ser qualquer um desses tipos. Para isso, é preciso declarar os tipos esperados separados por barras.
+
+            // A função abaixo pode receber tanto um número
+            // quanto uma string.
+            function retornarCPF(cpf: number | string){
+              console.log("Seu CPF é: " + cpf);
+            }
+
+
+
+
+    ---------------------------------------------------------------------------------------------------------
+    Classes
+
+        No TypeScript, as classes são uma maneira de definir a forma de um objeto. Podemos considerar uma classe como um projeto para a criação de objetos. Uma classe Person descreve os atributos de uma pessoa, por exemplo: nome, data de nascimento e cor dos olhos. Ela também descreve ações que uma pessoa pode executar, como falar, comer ou andar.
+
+        Mas a classe Person é apenas um plano para a criação de uma pessoa. Você deve criar uma instância de pessoa da classe Person antes que ela se torne um objeto ao qual você possa atribuir valores de propriedade (como definir a cor dos olhos como azul) ou chamar suas ações (como falar).
+
+
+                enum EyeColor {
+                    Black = "Pretos",
+                    Blue = "Azuis",
+                    Green = "Verdes",
+                    Brown = "Castanhos",
+                }
+
+                // usamos a palavra reservada class para definir uma classe
+                class Person {
+                    name: string;
+                    birthDate: Date; // o tipo Date está presente no TypeScript assim como no JavaScript
+                    eyeColor: EyeColor; // na cor dos olhos usamos uma Enum com valores pré definidos
+
+                    // aprenderemos mais sobre o construtor na próxima seção
+                    // considere-o como uma função utilizada para construir um objeto a partir da classe,
+                    // nele recebemos todos os dados necessários para construir um objeto de pessoa
+                    constructor(name: string, birthDate: Date, eyeColor: EyeColor) {
+                        // usamos o this para acessar as propriedades da instância da classe,
+                        // ele representa a própria instância que estamos criando
+                        // atribuimos o valor do parâmetro recebido a propriedade da instância da classe
+                        this.name  = name;
+                        this.birthDate  = birthDate;
+                        this.eyeColor  = eyeColor;
+                    }
+
+                    speak(): void {
+                        console.log(`${this.name} está falando.`);
+                    }
+
+                    eat(): void {
+                        console.log(`${this.name} está comendo.`)
+                    }
+
+                    walk(): void {
+                        console.log(`${this.name} está andando.`)
+                    }
+                }
+
+
+        ---
+        A classe Person pode ser reutilizada para criar qualquer quantidade de novos objetos Person, cada um com suas próprias características.
+
+            
+                // usamos a palavra reservada new para criar uma instância de Person
+                // e passamos os parâmetros necessários para o construtor
+                const person1 = new Person("Jane Doe", new Date("1986-01-01"), EyeColor.Brown);
+                const person2 = new Person("Jon Doe", new Date("1980-08-05"), EyeColor.Black);
+
+                console.log(person1);
+                person1.speak()
+
+                // saída:
+                // Person: {
+                //   "name": "Jane Doe",
+                //   "birthDate": "1986-01-01T00:00:00.000Z",
+                //   "eyeColor": "Castanhos"
+                // }
+                // "Jane Doe está falando."
+
+                console.log(person2);
+                person2.walk();
+
+                // saída:
+                // Person: {
+                //   "name": "Jon Doe",
+                //   "birthDate": "1980-08-05T00:00:00.000Z",
+                //   "eyeColor": "Pretos"
+                // }
+                // "Jon Doe está andando."
+
+
+
+        ---
+        Também é possível dizer que uma das propriedades da nossa classe Person não é obrigatória para criarmos um objeto pessoa. Podemos usar o caractere ? para marcar uma propriedade como opcional, o que faz com seu tipo seja um union type entre o tipo original e undefined. Se quiséssemos dizer que a cor dos olhos não é obrigatória nossa classe ficaria assim:
+
+        
+                enum EyeColor {
+                    Black = "Pretos",
+                    Blue = "Azuis",
+                    Green = "Verdes",
+                    Brown = "Castanhos",
+                }
+
+                class Person {
+                    name: string;
+                    birthDate: Date;
+                    eyeColor?: EyeColor;
+
+                    constructor(name: string, birthDate: Date, eyeColor?: EyeColor) {
+                        this.name  = name;
+                        this.birthDate  = birthDate;
+                        this.eyeColor  = eyeColor;
+                    }
+
+                    speak(): void {
+                        console.log(`${this.name} está falando.`);
+                    }
+
+                    eat(): void {
+                        console.log(`${this.name} está comendo.`)
+                    }
+
+                    walk(): void {
+                        console.log(`${this.name} está andando.`)
+                    }
+                }
+
+
+
+        A criação das nossas instâncias de Person poderiam ou não serem criadas com a cor dos olhos.
+
+
+                const person1 = new Person("Jane Doe", new Date("1986-01-01"));
+                const person2 = new Person("Jon Doe", new Date("1980-08-05"), EyeColor.Black);
+
+                console.log(person1);
+                person1.speak()
+
+                // saída:
+                // Person: {
+                //   "name": "Jane Doe",
+                //   "birthDate": "1986-01-01T00:00:00.000Z"
+                // }
+                // "Jane Doe está falando."
+
+                console.log(person2);
+                person2.walk();
+
+                // saída:
+                // Person: {
+                //   "name": "Jon Doe",
+                //   "birthDate": "1980-08-05T00:00:00.000Z",
+                //   "eyeColor": "Pretos"
+                // }
+                // "Jon Doe está andando."
+            
+
+
+
+        E poderíamos adicionar essa informação depois da criação:
+
+                const person1 = new Person("Jane Doe", new Date("1986-01-01"));
+
+                console.log(person1);
+                person1.speak()
+
+                person1.eyeColor = EyeColor.Brown;
+
+                console.log(person1);
+
+                // saída:
+                // Person: {
+                //   "name": "Jane Doe",
+                //   "birthDate": "1986-01-01T00:00:00.000Z",
+                //   "eyeColor": "Castanhos"
+                // }
+
+
+
+
+    -----------------------------------------------------------------------------------------------------------
+    Interfaces
+
+        Esta é mais uma estrutura que não existe no JavaScript. A Interface é utilizada para declarar a forma de um objeto, nomear e parametrizar os tipos do objeto e compor tipos de objetos nomeados existentes em novos. São uma forma eficiente de definir um “contrato de código”, ou seja, aquilo que você espera que seja implementado dentro do seu código.
+
+        Por exemplo, se quiséssemos criar uma interface que define as propriedades e métodos de uma pessoa funcionária, seria assim:
+        
+                interface Employee {
+                    firstName: string;
+                    lastName: string;
+                    fullName(): string;
+                }
+
+
+        Uma interface não inicializa nem implementa as propriedades declaradas dentro dela, porque o único trabalho de uma interface é descrever o objeto. Ela define o que o contrato de código exige, enquanto quem implementa a interface deve atender ao contrato fornecendo os detalhes de implementação necessários.
+
+                let employee: Employee = {
+                    firstName : "John",
+                    lastName: "Doe",
+                    fullName(): string {
+                        return this.firstName + " " + this.lastName; // usamos o "this" para acessar as propriedades da interface
+                    }
+                }
+
+                employee.firstName = 10;  // Error: Type "number" is not assignable to type "string"
+        
+
+
+        --------
+        Uma interface também pode estender de uma outra, o que permite que copiemos as propriedades de uma interface em outra, proporcionando mais flexibilidade na maneira de separará-las em componentes reutilizáveis. Podemos estender uma interface, usando a palavra reservada extends:
+
+
+                interface Teacher extends Employee {
+                    firstName: string;
+                    lastName: string;
+                    subject: string;
+                    fullName(): string;
+                    sayHello(): string;
+                }
+
+
+
+        E para criar um objeto do tipo Teacher seria assim:
+
+                let teacher: Teacher = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    subject: "Matemática",
+                    fullName(): string {
+                        return this.firstName + " " + this.lastName;
+                    },
+                    sayHello(): string {
+                        return `Olá, eu sou ${this.fullName()} e leciono ${this.subject}`;
+                    }
+                }
+
+
+        
+        Observe que um objeto que atende à interface Teacher precisa definir valores para todas as propriedades exigidas por essa interface, incluindo as propriedades da interface base Employee.
+
+        Por exemplo, o objeto teacher possui as propriedades firstName, lastName e o método fullName da interface Employee, mas também possui as próprias propriedade subject e o método sayHello que são específicas da interface Teacher.
+
+        Classes também podem implementar interfaces, o que faz com que a classe possua todas as propriedades e métodos daquela interface.
+
+
+
+
+
+
+    -----------------------------------------------------------------------------------------------------------
+    Generics
+
+        Os Generics são modelos de código que você pode definir e reutilizar em toda a base de código. Eles fornecem uma forma de informar a funções, classes ou interfaces que tipo você deseja usar ao chamá-las, além de nos ajudar a reduzir o uso do tipo any, que não é uma boa prática em TypeScript.
+
+        Por exemplo, vamos criar uma função de nome getArray que gera um array de itens do tipo any.
+                
+                function getArray(items : any[]) : any[] {
+                    return new Array().concat(items);
+                }
+
+
+        Declaramos uma variável de nome numberArray chamando a função getArray e passando a ela um array de numbers, enquanto uma variável stringArray é declarada com um array de strings. Como o tipo any foi usado, não há nada que impeça o código de enviar um string para o numberArray ou um number para o stringArray.
+
+        
+                let numberArray = getArray([5, 10, 15, 20]);
+                let stringArray = getArray(["Cats", "Dogs", "Birds"]);
+                numberArray.push(25);
+                stringArray.push("Rabbits");
+                numberArray.push("isto não é um número");
+                stringArray.push(30);
+                console.log(numberArray);
+                // Saída:  [5, 10, 15, 20, 25, "isto não é um número"]
+                console.log(stringArray);
+                // Saída: ["Cats", "Dogs", "Birds", "Rabbits", 30]    
+
+        
+        E caso quisermos garantir que o TypeScript verifique e garanta que os valores sejam de um determinado tipo?
+
+        É nesse momento que os generics entram em cena.
+
+        
+                function getArray<T>(items : T[]) : T[] {
+                    return new Array<T>().concat(items);
+                }
+        
+
+        Os generics definem uma ou mais variáveis de tipo para identificar o tipo ou tipos que serão passados para o componente, colocados entre colchetes angulares (< >). T é um nome comumente usado para um generic, mas você pode nomeá-lo como desejar.
+
+        Após especificar a variável de tipo, você pode usá-la no lugar do tipo em parâmetros, no tipo de retorno ou em qualquer outro lugar na função em que você adicionaria uma anotação de tipo.
+
+        Agora podemos criar declarações de variável para numberArray e stringArray atualizadas para chamar a função com o tipo desejado, o TypeScript impede que os itens inválidos sejam adicionados ao array.
+
+            
+                let numberArray = getArray<number>([5, 10, 15, 20]);
+                numberArray.push(25);
+                numberArray.push("This is not a number"); // Isto vai gerar um erro de compilação
+
+                let stringArray = getArray<string>(["Cats", "Dogs", "Birds"]);
+                stringArray.push("Rabbits");
+                stringArray.push(30); // Isto vai gerar um erro de compilação
+
+
+        Podemos passar quantas variáveis de tipo for necessário para nossos componentes genéricos:
+
+
+                function identity<T, U> (value: T, message: U) : T {
+                    console.log(message);
+                    return value
+                }
+
+                let returnNumber = identity<number, string>(100, "Olá");
+                let returnString = identity<string, string>("100", "Mundo");
+                let returnBoolean = identity<boolean, string>(true, "Olá, Mundo!");
+            
+
+
+
+        -------------
+        Outra forma de uso comum para generics é com interfaces e classes:
+
+
+                interface ProcessIdentity<T, U> {
+                    (value: T, message: U): T;
+                }
+
+                function processIdentity<T, U> (value: T, message: U) : T {
+                    console.log(message);
+                    return value
+                }
+
+                let processor: ProcessIdentity<number, string> = processIdentity;
+                let returnNumber = processor(100, "Olá");
+                let returnString = processor("Olá", 100); // Type check error: Argument of type "string" is not assignable to parameter of type "number".
+
+
+
+    
+                ----
+        
+                class ProcessIdentity<T, U> {
+                    _value: T;
+                    _message: U;
+                    constructor(value: T, message: U) {
+                        this._value = value;
+                        this._message = message;
+                    }
+                    getIdentity() : T {
+                        console.log(this._message);
+                        return this._value
+                    }
+                }
+
+                let processor = new ProcessIdentity<number, string>(100, "Olá");
+                processor.getIdentity();  // imprime "Olá" e retorna 100
+
+
+
+
+
+
+    -----------------------------------------------------------------------------------------------------------
+    Model com MySQL
+
+        Vamos agora colocar os aprendizados em prática e ver como podemos usar Generics, Classes e Interfaces em um algo real life. Para esse projeto, vamos usar um banco de dados MySQL para gerenciar uma lista de livros. Crie o banco usando o sql abaixo:
+
+            
+                CREATE DATABASE IF NOT EXISTS books_api;
+
+                USE books_api;
+
+                CREATE TABLE IF NOT EXISTS  books
+                (
+                  id INT NOT NULL AUTO_INCREMENT,
+                  title VARCHAR(30) NOT NULL,
+                  price DECIMAL(10, 2),
+                  author VARCHAR(100) NOT NULL,
+                  isbn VARCHAR(100),
+                  PRIMARY KEY(id)
+                );
+
+                INSERT INTO books (title, price, author, isbn)
+                VALUES ('Código Limpo', 125.9, 'Robert C Martin', '8576082675'),
+                  ('Refatoração', 129.9, 'Martin Fowler', '8575227246'),
+                  ('Padrões de Projetos', 141.98, 'Erich Gamma', '8573076100');
+
+
+
+        Iniciaremos vendo como a lib mysql2 utiliza o recurso de generics em seus métodos. Para isso, vamos começar implementando nosso arquivo connection.ts.
+
+
+                // ./models/connection.ts
+
+                import mysql from 'mysql2/promise';
+
+                import dotenv from 'dotenv';
+
+                dotenv.config();
+
+                export default mysql.createPool({
+                  host: process.env.DB_HOSTNAME,
+                  user: process.env.DB_USER,
+                  password: process.env.DB_PASSWORD,
+                  database: process.env.DB_DATABASE
+                });
+
+
+
+        Observação: Lembre-se de criar o arquivo .env com os valores das variáveis de ambiente utilizadas no arquivo models/connection.ts e de instalar as bibliotecas mysql2 e dotenv com npm install mysql2 dotenv.
+
+        Agora, vamos ver como a função connection.execute que usamos para executar queries usa o recurso de generics. Ao olhar para a sua definição podemos encontrar a seguinte assinatura:
+
+
+                execute<
+                    T extends RowDataPacket[][] | RowDataPacket[] | OkPacket | OkPacket[] | ResultSetHeader
+                  >(
+                    sql: string,
+                    values: any | any[] | { [param: string]: any }
+                  ): Promise<[T, FieldPacket[]]>;
+
+
+        Vamos nos concentrar no generic utilizado na definição da função. O método execute pode receber qualquer tipo que estenda uma das seguintes interfaces:
+            
+                    RowDataPacket[][]
+                    RowDataPacket[]
+                    OkPacket
+                    OkPacket[]
+                    ResultSetHeader
+
+
+        Ao fazer isso podemos passar qual o tipo de dado que esperamos que essa função retorne, desde que ele respeite uma dessas interfaces.
+
+        A título de exemplo, vamos fazer o seguinte trecho de código:
+
+
+                    // ./main.ts
+
+                    import connection  from './models/connection';
+
+                    const main = async () => {
+                      const result = await connection.execute('SELECT * FROM books');
+                      const [rows] = result;
+                      console.log(rows);
+                    }
+
+                    main();
+
+
+        Ao executar o código acima você verá seu exemplo funcionando. Isso acontece, pois mesmo não especificando o tipo de retorno dentre os tipos possíveis para connection.execute pode-se extrair um elemento do array.
+
+        Agora, vamos ver o aconteceria se você tentasse fazer uma query do tipo INSERT e extrair o insertId.
+
+        Observação: Para executar o exemplo a seguir instale a lib readline-sync.
+
+
+                    npm i readline-sync @types/readline-sync
+
+
+            
+                    -----
+                
+                    // ./execute.insert.ts
+
+                    import readline from 'readline-sync';
+                    import connection from './models/connection';
+
+                    const main = async () => {
+                      const title = readline.question('Digite o nome do livro: ');
+                      const price = readline.questionFloat('Digite o preço do livro: ');
+                      const author = readline.question('Digite o autor do livro: ');
+                      const isbn = readline.question('Digite o isbn do livro: ');
+
+                      const result = await connection.execute(
+                        'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
+                        [title, price, author, isbn]
+                      );
+                      const [dataInserted] = result;
+                      const { insertId } = dataInserted;
+                      console.log(insertId);
+                    }
+
+                    main();
+
+
+        Você vai perceber que seu código não pode ser compilado, pois o TypeScript não consegue inferir que dataInserted é um objeto que possui um tipo com o atributo insertId. O erro encontrado será:
+
+                    Property ‘insertId’ does not exist on type ‘RowDataPacket[] | RowDataPacket[][] | OkPacket | OkPacket[] | ResultSetHeader’.
+
+
+        Porém na própria lib mysql2 temos uma interface que possui esse atributo, que é ResultSetHeader. Ao passar essa interface como generic para connection.execute, você vai perceber que a linha que extrai o atributo insertId e passa a ser compilável.
+
+
+                    // ./execute.insert.ts
+
+                    // import readline from  'readline-sync';
+                    import { ResultSetHeader } from "mysql2";
+                    // import connection  from "./models/connection";
+
+                    // const main = async () => {
+                    //   const title = readline.question('Digite o nome do livro: ');
+                    //   const price = readline.questionFloat('Digite o preço do livro: ');
+                    //   const author = readline.question('Digite o autor do livro: ');
+                    //   const isbn = readline.question('Digite o isbn do livro: ');
+
+                      const result = await connection.execute<ResultSetHeader>(
+                        'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
+                        [title, price, author, isbn]
+                      );
+                      const [dataInserted] = result;
+                      const { insertId } = dataInserted; // essa linha não acusa mais erro de compilação.
+                    //  console.log(insertId);
+                    // }
+                    //
+                    // main();
+
+
+
+        Este é um primeiro exemplo do uso de generics no dia a dia que já podemos encontrar. Com base nisso, vamos implementar nosso modelo.
+
+
+
+    -----------------------------------------------------------------------------------------------------------------
+    Implementando um model como uma classe
+
+        Para este exemplo, criaremos nosso modelo como uma classe que vai possuir o atributo connection, cujo valor será recebido a partir do construtor da classe. Esta classe também irá possuir o método getAll para retornar o resultados da query.
+
+
+                    // ./models/Book.ts
+
+                    import { Pool } from "mysql2/promise";
+
+                    export default class BookModel {
+                      private connection: Pool;
+
+                      constructor(connection: Pool) {
+                        this.connection = connection;
+                      }
+
+                      public async getAll() {
+                        const result = await this.connection.execute('SELECT * FROM books');
+                        const [rows] = result;
+                        return rows;
+                      }
+                    }
+
+
+
+        Dessa forma, podemos usar esse modelo para ser nossa fonte de acesso aos dados. Vamos instanciar um objeto dessa classe e chamá-lo no nosso arquivo main.ts.
+
+
+                    // ./main.ts
+
+                    import BookModel from "./models/Book";
+                    import connection  from "./models/connection";
+
+                    const main = async () => {
+                      const bookModel = new BookModel(connection);
+
+                      const books = await bookModel.getAll();
+                      console.log(books)
+                    }
+
+                    main();
+
+
+
+        Apesar do código acima retornar, não temos uma previsibilidade sobre o tipo retornado pela função getAll, por isso vamos fazer duas coisas:
+
+
+                    1 - Definir uma interface que representa objetos da entidade Book;
+    
+                    2 - Fazer nosso modelo retornar um array de Books.
+
+
+
+
+
+                    // ./models/Book.ts
+
+                    import { Pool } from "mysql2/promise";
+
+                    export interface Book {
+                      id?: number,
+                      title: string,
+                      price: number,
+                      author: string,
+                      isbn: string,
+                    }
+
+                    export default class BookModel {
+                      private connection: Pool;
+
+                      constructor(connection: Pool) {
+                        this.connection = connection;
+                      }
+
+                      public async getAll(): Promise<Book[]> {
+                        const result = await this.connection.execute('SELECT * FROM books');
+                        const [rows] = result;
+                        return rows as Book[];
+                      }
+                    }
+
+
+
+
+
+            Perceba que além de definir a interface Book como tipo do retorno da função getAll, especificamos que o resultado da função é uma Promise que encapsula um array de objetos do tipo Book. Precisamos fazer isso, pois por se tratar de uma função assíncrona, o retorno imediato dessa função é uma Promise. Por último, usamos a palavra reservada as que faz uma adaptação (cast) do objeto rows, que originalmente é um objeto do tipo RowDataPacket[], mas que agora passa a esperar uma array de objetos da interface Book.
+
+
+
+
+        ------------------------------
+        Método create
+
+            Vamos implementar agora o método create com base no que vimos anteriormente.
+
+
+                        // ./models/Book.ts
+
+                        import { Pool, ResultSetHeader } from "mysql2/promise";
+                        //
+                        // export interface Book {
+                        //   id?: number,
+                        //   title: string,
+                        //   price: number,
+                        //   author: string,
+                        //   isbn: string,
+                        // }
+                        //
+                        // export default class BookModel {
+                        //   private connection: Pool;
+                        //
+                        //   constructor(connection: Pool) {
+                        //     this.connection = connection;
+                        //   }
+                        //
+                        //   public async getAll(): Promise<Book[]> {
+                        //     const result = await this.connection.execute('SELECT * FROM books');
+                        //     const [rows] = result;
+                        //     return rows as Book[];
+                        //   }
+
+                          public async create(book: Book): Promise<Book> {
+                            const { title, price, author, isbn } = book;
+                            const result = await this.connection.execute<ResultSetHeader>(
+                              'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
+                              [title, price, author, isbn]
+                            );
+                            const [dataInserted] = result;
+                            const { insertId } = dataInserted;
+                            return { id: insertId, ...book };
+                          }
+                        // }
+
+
+
+            Perceba que recebemos um objeto do tipo Book como parâmetro e usamos essa informação para salvar os valores no banco.
+
+            Podemos usar o código abaixo para ler valores e cadastrar um livro através do método create do nosso modelo.
+
+
+                        // ./main.ts
+
+                        import readline from  'readline-sync';
+
+                        import BookModel, { Book } from "./models/Book";
+                        import connection  from "./models/connection";
+
+                        const main = async () => {
+                          const bookModel = new BookModel(connection);
+
+                          const title = readline.question('Digite o título do livro: ');
+                          const price = readline.questionFloat('Digite o preço do livro: ');
+                          const author = readline.question('Digite o autor do livro: ');
+                          const isbn = readline.question('Digite o isbn do livro: ');
+
+                          const newBook: Book = { title , price , author , isbn };
+
+                          const createdBook = await bookModel.create(newBook);
+                          console.log(createdBook)
+                        }
+
+                        main();
+
+
+            Com isso temos um primeiro modelo criado.
+
+
+
+
+
+==============================================================================================================
+DIA 03 - EXPRESS COM TYPESCRIPT
+    
+    Iniciando e configurando um projeto Node + TypeScript
+    
+        Para criarmos um projeto Node + TypeScript, primeiramente devemos iniciar nosso projeto Node padrão como já fazemos. Vamos criar um diretório chamado express-typescript, entrar no diretório e iniciar nosso projeto Node.
+
+                mkdir express-typescript && cd express-typescript
+        
+                npm init -y
+
+    
+        O próximo passo é adicionar o suporte ao TypeScript ao nosso projeto, para isso vamos instalar o pacote npm do TypeScript como dependência de desenvolvimento do nosso projeto. Lembrando que em produção sempre iremos usar o código compilado de TypeScript para JavaScript, por isso utilizamos como dependência de desenvolvimento.
+    
+                npm install -D typescript
+
+
+        Por que fazemos isso, ao invés de usarmos o pacote instalado globalmente em nossas máquinas ou como um executável npx? Porque com isso conseguimos garantir que todas as pessoas que vão trabalhar nesse projeto estejam sempre executando uma mesma versão, evitando possíveis incompatibilidades, caso uma tenha uma versão diferente da outra.
+        
+        Agora vamos criar nosso arquivo tsconfig.json com a seguinte configuração:
+
+                {
+                  "compilerOptions": {
+                    "module": "commonjs",
+                    "target": "es6",
+                    "rootDir": "./",
+                    "outDir": "./dist",
+                    "esModuleInterop": true,
+                    "strict": true
+                  }
+                }
+
+
+        Nosso próximo passo será instalar como dependência de desenvolvimento o pacote npm de declarações de tipos para os módulos padrões do Node.
+
+                npm install -D @types/node
+
+
+            ----
+            Mas o que são declarações de tipos?
+        
+                Arquivos que descrevem tipos de várias APIs JavaScript para o compilador TypeScript. Em seu projeto, você definirá seus próprios tipos, mas também precisará de tipos para módulos padrão do Node ou diferentes pacotes externos que usará, como o Express.
+
+                Esses arquivos são módulos que não possuem nenhuma implementação de código, mas servem como uma camada que descreve a implementação JavaScript por trás dele através de tipos.
+
+
+            ----
+            Por último vamos instalar o ts-node-dev, que é um pacote de utilitários que vai nos ajudar a executar o servidor de desenvolvimento, escrito em TypeScript, diretamente no terminal, sem necessidade de compilarmos o código em JavaScript, além de reiniciar o servidor a cada alteração que fizermos, sem a necessidade de encerrarmos o processo e o iniciarmos novamente.
+
+                npm install -D ts-node-dev
+
+
+            É muito importante entendermos o porquê da instalação de cada um desses pacotes. Já nas nossas próximas configurações de projetos Node + TypesCript, podemos fazer todas as instalações em único comando:
+
+                npm install -D typescript @types/node ts-node-dev
+
+
+
+
+    ---------------------------------------------------------------------------------------------------------
+    Instalando o Express e inicializando a aplicação
+
+        Vamos agora instalar as nossas dependências necessárias para iniciarmos nossa aplicação. Primeiro instalamos o pacote do Express:
+
+                npm install express
+
+
+        E posteriormente instalamos o pacote npm de declarações de tipos do Express:
+
+                npm install -D @types/express
+
+
+        Vamos instalar a lib http-status-codes que nos permite lidar com os status HTTP de uma forma mais simples.
+
+                npm install http-status-codes
+
+
+        Agora vamos criar a nossa aplicação Express. Para isso, crie um arquivo chamado index.ts na raiz do diretório do projeto, com o seguinte conteúdo:
+
+                touch index.ts
+
+
+                // ./index.ts
+
+                import express from 'express';
+                import { StatusCodes } from 'http-status-codes';
+
+                const app = express();
+
+                app.use(express.json());
+
+                const PORT = 8000;
+
+                app.get('/', (req, res) => {
+                  res.status(StatusCodes.OK).send('Express + TypeScript')
+                });
+
+                app.listen(PORT, () => {
+                  console.log(`Server is running at http://localhost:${PORT}`);
+                });
+
+
+        Até então não temos nada de novo, somente uma aplicação Express básica e com o código ainda com a sintaxe em JavaScript. Isso é possível porque, como vimos anteriormente, todo o código TypeScript é compatível com JavaScript.
+
+        Para termos certeza que esse código funciona, vamos criar alguns scripts no nosso package.json e rodar a aplicação:
+
+        ...
+        "scripts": {
+            "start": "npm run build && node ./dist/index.js",
+            "dev": "tsnd index.ts",
+            "build": "tsc"
+         },
+        ...
+
+
+        Scripts:
+
+            start: executa o build da aplicação e depois roda o arquivo compilado dentro da pasta dist;
+            dev: executa a aplicação em modo de desenvolvimento utilizando o ts-node-dev;
+            build: executa a compilação do projeto utilizando o TSC(TypeScript Compiler).
+
+
+        Agora vamos executar a aplicação utilizando o script start:
+
+                npm start
+
+
+        Ao acessarmos no nosso navegador o caminho http://localhost:8000/ conseguimos ver a mensagem da nossa rota / : “Express + TypeScript”.
+
+        Vamos refatorar a nossa aplicação para que passe a utilizar os tipos:
+
+                // ./index.ts
+
+                import express, { Request, Response } from 'express';
+                import { StatusCodes } from 'http-status-codes';
+
+                const app = express();
+
+                app.use(express.json());
+
+                const PORT = 8000;
+
+                app.get('/', (req: Request, res: Response) => {
+                    res.status(StatusCodes.OK).send('Express + TypeScript')
+                });
+
+                app.listen(PORT, () => {
+                    console.log(`Server is running at http://localhost:${PORT}`);
+                });
+
+
+
+        Veja como nosso código ficou bem mais semântico com a utilização dos tipos, ou seja, conseguimos expressar muito melhor a nossa intenção em cada variável e/ou função do nosso script.
+
+        Para terminar nosso setup, vamos adicionar nosso middleware de erro. Qualquer tipo de erro que acontecer em tempo de execução cairá nesse middleware:
+
+
+                // ./index.ts
+
+                import express, { NextFunction, Request, Response } from 'express';
+                // import { StatusCodes } from 'http-status-codes';
+                //
+                // const app = express();
+                //
+                // app.use(express.json());
+                //
+                // const PORT = 8000;
+                //
+                // app.get('/', (req: Request, res: Response) => {
+                //   res.status(StatusCodes.OK).send('Express + TypeScript')
+                // });
+
+                app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+                  const { name, message, details } = err as any;
+                  console.log(`name: ${name}`);
+
+                  switch (name) {
+                    case 'ValidationError':
+                      res.status(400).json({ message: details[0].message });
+                      break;
+                    case 'NotFoundError':
+                      res.status(404).json({ message });
+                      break;
+                    case 'ConflictError':
+                      res.status(409).json({ message });
+                      break;
+                    default:
+                      console.error(err);
+                      res.sendStatus(500);
+                  }
+
+                  next();
+                });
+
+                // app.listen(PORT, () => {
+                //   console.log(`Server is running at http://localhost:${PORT}`);
+                // });
+
+
+        Sempre coloque ele após a declaração de outros middlewares, caso o contrário esse middleware não irá capturar os erros dos demais.
+
+        Além disso vamos instalar uma lib que faz o tratamento de erros disparar diretamente o middleware de erro sem a necessidade de colocar try/catch ao longo do seu código. Essa lib é a express-async-errors.
+
+                npm install express-async-errors
+
+
+        Para utilizá-la basta chamar no controller da forma abaixo.
+
+                // ./index.ts
+
+                import express, { NextFunction, Request, Response } from 'express';
+                import { StatusCodes } from 'http-status-codes';
+                import 'express-async-errors';
+
+                // ..
+
+
+        ------
+        Para nosso setup ficar 100% vamos instalar mais duas libs que usaremos um pouco mais a frente. Elas nos ajudarão a disparar erros específicos para serem tratados no middleware de erro.
+
+                npm install restify-errors @types/restify-errors
+        
+
+        Com o setup finalizado, vamos começar a implementar nosso CRUD.
+
+
+
+
+
+    --------------------------------------------------------------------------------------------------
+    Criando um CRUD de livros
+
+        Dando continuidade à nossa aplicação vamos criar um CRUD de livros. Primeiramente criaremos uma interface para representar um livro no nosso sistema, ela irá possuir as seguintes propriedades:
+
+                -> id: A chave primária da tabela. Como é um campo que não será obrigatório, vamos adicioná-la como um atributo opcional.
+                -> title: O título do livro;
+                -> price: O preço de venda do livro;
+                -> author: O nome do autor do livro;
+                -> isbn: O registro ISBN do livro.
+
+
+
+                // ./interfaces/book.interface.ts
+                interface Book {
+                  id?: number;
+                  title: string;
+                  price: number;
+                  author: string;
+                  isbn: string;
+                }
+
+                export default Book;
+
+
+
+        Agora vamos criar a estrutura do nosso arquivo de rotas para livros, voltaremos a esse arquivo a medida que formos desenvolvendo as funcionalidades do CRUD:
+
+                // ./routes/books.routes.ts
+
+                import { Router } from 'express';
+
+                const router = Router();
+
+                export default router;
+
+
+        Lembre-se de importar essas rotas no arquivo index.ts:
+
+                // ./index.ts
+
+                // import express, { NextFunction, Request, Response } from 'express';
+                // import { StatusCodes } from 'http-status-codes';
+                // import 'express-async-errors';
+                import BooksRoutes from './routes/books.routes';
+
+                // const PORT = 8000;
+
+                // const app: express.Application = express();
+
+                // app.use(express.json());
+
+                // app.get('/', (req: Request, res: Response) => {
+                //     res.status(StatusCodes.OK).send('Express + TypeScript')
+                // });
+
+                app.use(BooksRoutes); // coloque essa linha antes do middleware de erro!
+
+                // ..
+
+
+
+        Utilizaremos o mesmo banco apresentado no exemplo do conteúdo do dia anterior. Caso ainda não tenha criado o banco, o SQL pode ser encontrado a seguir:
+
+                CREATE DATABASE IF NOT EXISTS books_api;
+
+                USE books_api;
+
+                CREATE TABLE IF NOT EXISTS  books
+                (
+	                id INT NOT NULL AUTO_INCREMENT,
+	                title VARCHAR(30) NOT NULL,
+	                price DECIMAL(10, 2),
+	                author VARCHAR(100) NOT NULL,
+	                isbn VARCHAR(100),
+	                PRIMARY KEY(id)
+                );
+
+                INSERT INTO books (title, price, author, isbn)
+                VALUES ('Código Limpo', 125.9, 'Robert C Martin', '8576082675'),
+	                ('Refatoração', 129.9, 'Martin Fowler', '8575227246'),
+	                ('Padrões de Projetos', 141.98, 'Erich Gamma', '8573076100');
+
+
+            
+
+        Também já havíamos criado um arquivo de conexão e um modelo com os métodos para listar todos os livros e cadastrar um novo livro. Iremos reutilizar ambos os arquivos:
+
+                // ./models/connection.ts
+
+                import mysql from 'mysql2/promise'; // instalar mysql2 e dotenv
+
+                import dotenv from 'dotenv';
+
+                dotenv.config();
+
+                export default mysql.createPool({
+                  host: process.env.DB_HOSTNAME,
+                  user: process.env.DB_USER,
+                  password: process.env.DB_PASSWORD,
+                  database: process.env.DB_DATABASE,
+                });
+
+
+
+        Como o VsCode provavelmente já alertou, precisaremos instalar as libs mysql2 e dotenv para que tudo funcione corretamente:
+            
+                npm i mysql2 dotenv
+
+            
+        Não esqueça também de criar um arquivo .env, com as variáveis de ambiente conforme o connection.ts!
+
+        A única diferença que teremos no arquivo de modelo é que agora vamos importar a interface Book que criamos agora há pouco em vez de criá-la no mesmo arquivo, como anteriormente. Ela continuará definindo o tipo de retorno esperado nas nossas requisições.
+
+                // ./models/book.model.ts
+
+                import { Pool, ResultSetHeader } from 'mysql2/promise';
+                import Book from '../interfaces/book.interface';
+
+                export default class BookModel {
+                  public connection: Pool;
+
+                  constructor(connection: Pool) {
+                    this.connection = connection;
+                  }
+
+                  public async getAll(): Promise<Book[]> {
+                    const result = await this.connection
+                      .execute('SELECT * FROM books');
+                    const [rows] = result;
+                    return rows as Book[];
+                  }
+
+                  public async create(book: Book): Promise<Book> {
+                    const { title, price, author, isbn } = book;
+                    const result = await this.connection.execute<ResultSetHeader>(
+                      'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
+                      [title, price, author, isbn],
+                    );
+                    const [dataInserted] = result;
+                    const { insertId } = dataInserted;
+                    return { id: insertId, ...book };
+                  }
+                }
+
+
+
+        A partir desse ponto, vamos implementar cada parte do nosso CRUD!
+
+
+    ------------------------------------------------------------------------------------------------------
+
+    Listando os livros
+
+        Vamos implementar nossa camada de serviço, que deve ficar responsável por fazer a interface com a camada de modelo.
+
+                // ./services/books.service.ts
+
+                import connection from '../models/connection';
+                import BookModel from '../models/book.model';
+                import Book from '../interfaces/book.interface';
+
+                class BookService {
+                  public model: BookModel;
+
+                  constructor() {
+                    this.model = new BookModel(connection);
+                  }
+
+                  public async getAll(): Promise<Book[]> {
+                    const books = await this.model.getAll();
+                    return books;
+                  }
+                }
+
+                export default BookService;            
+            
+
+        ----
+        Agora podemos criar nosso controller para chamar o service. Escrevemos nossos métodos com arrow funcions para garantir o bind da classe e o correto funcionamento do this.
+
+                // ./controllers/books.controller.ts
+
+                import { Request, Response } from 'express';
+                import { StatusCodes } from 'http-status-codes';
+                import BookService from '../services/books.service';
+
+                class BooksController {
+                  constructor(private bookService = new BookService()) { }
+
+                  public getAll = async (_req: Request, res: Response) => {
+                    const books = await this.bookService.getAll();
+                    res.status(StatusCodes.OK).json(books);
+                  };
+                }
+
+                export default BooksController;
+
+
+        ------
+        Agora sim, podemos usar nosso controller dentro do arquivo de rotas e já teremos nosso primeiro endpoint funcional.
+
+                // routes/books.routes.ts
+
+                // import { Router } from 'express';
+                import BooksController from '../controllers/books.controller';
+
+                // const router = Router();
+
+                const booksController = new BooksController();
+
+                router.get('/books', booksController.getAll);
+
+                // export default router;
+
+
+
+    ---------------------------------------------------------------------------------------------------------
+    Buscando um livro por id
+        
+        Vamos começar implementando no nosso modelo o método getById para buscar um livro pelo id.
+        
+                // ./models/book.model.ts
+
+                // import { Pool, ResultSetHeader } from 'mysql2/promise';
+                // import Book from '../interfaces/book.interface';
+
+                // export default class BookModel {
+                //   public connection: Pool;
+
+                //   constructor(connection: Pool) {
+                //     this.connection = connection;
+                //   }
+
+                //   public async getAll(): Promise<Book[]> {
+                //     const result = await this.connection
+                //       .execute('SELECT * FROM books');
+                //     const [rows] = result;
+                //     return rows as Book[];
+                //   }
+
+                  public async getById(id: number): Promise<Book> {
+                    const result = await this.connection
+                      .execute('SELECT * FROM books WHERE id=?', [id]);
+                    const [rows] = result;
+                    const [book] = rows as Book[];
+                    return book;
+                  }
+
+                //   public async create(book: Book): Promise<Book> {
+                //     const { title, price, author, isbn } = book;
+                //     const result = await this.connection.execute<ResultSetHeader>(
+                //       'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
+                //       [title, price, author, isbn],
+                //     );
+                //     const [dataInserted] = result;
+                //     const { insertId } = dataInserted;
+                //     return { id: insertId, ...book };
+                //   }
+                // }
+
+
+    
+        -----
+        Agora vamos para nosso service.
+
+                // ./services/books.service
+
+                // import connection from '../models/connection';
+                // import BookModel from '../models/book.model';
+                // import Book from '../interfaces/book.interface';
+
+                // class BookService {
+                //   public model: BookModel;
+
+                //   constructor() {
+                //     this.model = new BookModel(connection);
+                //   }
+
+                //   public async getAll(): Promise<Book[]> {
+                //     const books = await this.model.getAll();
+                //     return books;
+                //   }
+
+                  public async getById(id: number): Promise<Book> {
+                    const book = await this.model.getById(id);
+                    return book;
+                  }
+                // }
+
+                // export default BookService;
+
+
+
+
+        -----
+        Agora é a vez do controller.
+
+                // ./controllers/books.controller.ts
+
+                // import { Request, Response } from 'express';
+                // import { StatusCodes } from 'http-status-codes';
+                // import BookService from '../services/books.service';
+
+                // class BooksController {
+                //   constructor(private bookService = new BookService()) { }
+
+                //   public getAll = async (_req: Request, res: Response) => {
+                //     const books = await this.bookService.getAll();
+                //     res.status(StatusCodes.OK).json(books);
+                //   };
+
+                  public getById = async (req: Request, res: Response) => {
+                    const id = parseInt(req.params.id);
+                    const book = await this.bookService.getById(id);
+
+                    if (!book) {
+                      return res.status(StatusCodes.NOT_FOUND)
+                        .json({ message: 'Book not found!'});
+                    }
+
+                    res.status(StatusCodes.OK).json(book);
+                  }
+                // }
+                // export default BooksController;
+
+
+
+        -----
+        Vamos agora para nosso arquivo de rotas.
+
+                import { Router } from 'express';
+                // import booksController from '../controllers/books.controller';
+
+                // const router = Router();
+
+                // const booksController = new BooksController();
+
+                // router.get('/books', booksController.getAll);
+                router.get('/books/:id', booksController.getById);
+
+                // export default router;
+
+
+
+        ----
+        Pronto. Temos nossa rota para buscar um livro pelo id.
+
+
+
+
+
+    ------------------------------------------------------------------------------------------------------------
+    Cadastrando um livro
+
+        Como já haviamos desenvolvido o método create no model no conteúdo do dia anterior que reaproveitamos aqui, vamos direto para o service.
+
+                // ./services/books.service
+
+                import connection from '../models/connection';
+                // import BookModel from '../models/book.model';
+                // import Book from '../interfaces/book.interface';
+
+                // class BookService {
+                //   public model: BookModel;
+
+                //   constructor() {
+                //     this.model = new BookModel(connection);
+                //   }
+
+                //   public async getAll(): Promise<Book[]> {
+                //     const books = await this.model.getAll();
+                //     return books;
+                //   }
+
+                //   public async getById(id: number): Promise<Book> {
+                //     const book = await this.model.getById(id);
+                //     return book;
+                //   }
+
+                  public create(book: Book): Promise<Book> {
+                    return this.model.create(book);
+                  }
+                // }
+
+                // export default BookService;        
+        
+
+
+        -----
+        Vamos adicionar o método create no nosso controller.
+
+                // ./controllers/books.controller.ts
+
+                import { Request, Response } from 'express';
+                // import { StatusCodes } from 'http-status-codes';
+                // import BookService from '../services/books.service';
+
+                // class BooksController {
+                //   constructor(private bookService = new BookService()) { }
+
+                //   public getAll = async (_req: Request, res: Response) => {
+                //     const books = await this.bookService.getAll();
+                //     res.status(StatusCodes.OK).json(books);
+                //   };
+
+                //   public getById = async (req: Request, res: Response) => {
+                //     const id = Number(req.params.id);
+                //     const book = await this.bookService.getById(id);
+
+                //     if (!book) {
+                //       return res.status(StatusCodes.NOT_FOUND)
+                //         .json({ message: 'Book not found!' });
+                //     }
+
+                //     res.status(StatusCodes.OK).json(book);
+                //   };
+
+                  public create = async (req: Request, res: Response) => {
+                    const book = req.body;
+
+                    const bookCreated = await this.bookService.create(book);
+                    res.status(StatusCodes.CREATED).json(bookCreated);
+                  };
+                // }
+
+                // export default BooksController;
+
+
+
+
+        ----
+        Antes de inserir um livro no banco de dados, precisamos validar os dados recebidos através do nosso endpoint. Para isso, vamos criar um middleware que verifica se todas as propriedades obrigatórias estão presentes, e se elas não são vazias:        
+
+                // ./middlewares/books.middleware.ts
+
+                import { NextFunction, Request, Response } from 'express';
+                import { StatusCodes } from 'http-status-codes';
+                import Book from '../interfaces/book.interface';
+
+                const properties = ['title', 'price', 'author', 'isbn'];
+
+                function validateProperties(book: Book): [boolean, string | null] {
+                  for (let i = 0; i < properties.length; i += 1) {
+                    if (!Object.prototype.hasOwnProperty.call(book, properties[i])) {
+                      return [false, properties[i]];
+                    }
+                  }
+                  return [true, null];
+                }
+
+                function validateValues(book: Book): [boolean, string | null] {
+                  const entries = Object.entries(book);
+                  for (let i = 0; i < entries.length; i += 1) {
+                    const [property, value] = entries[i];
+                    if (!value) {
+                      return [false, property];
+                    }
+                  }
+                  return [true, null];
+                }
+
+                function validationBook(req: Request, res: Response, next: NextFunction) {
+                  const book: Book = req.body;
+
+                  let [valid, property] = validateProperties(book);
+
+                  if (!valid) {
+                    return res.status(StatusCodes.BAD_REQUEST).send(
+                      `O campo ${property} é obrigatório.`,
+                    );
+                  }
+
+                  [valid, property] = validateValues(book);
+
+                  if (!valid) {
+                    return res.status(StatusCodes.BAD_REQUEST).send(
+                      `O campo ${property} não pode ser nulo ou vazio.`,
+                    );
+                  }
+
+                  next();
+                }
+
+                export default validationBook;
+
+
+
+
+
+        ------
+        Agora vamos vincular nossa rota POST /books ao middleware de validação e ao método create do controller.
+
+                // routes/books.routes.ts
+
+                // import { Router } from 'express';
+                // import BooksController from '../controllers/books.controller';
+                import validationBook from '../middlewares/books.middleware';
+
+                // const router = Router();
+
+                // const booksController = new BooksController();
+
+                // router.get('/books', booksController.getAll);
+                // router.get('/books/:id', booksController.getById);
+                router.post('/books/', validationBook, booksController.create);
+
+                // export default router;
+                
+
+        ---
+        Pronto, tente fazer uma requisição para POST /books e veja o endpoint funcionando. Faça testes tanto mandando dados válidos, como mandando dados inválidos.
+
+
+
+
+    -------------------------------------------------------------------------------------------------------
+    Editando um livro
+
+        Vamos começar implementando o método update no nosso modelo.
+        
+            // ./models/book.model
+
+            // import { Pool, ResultSetHeader } from "mysql2/promise";
+            //
+            // import Book from "../interfaces/book.interface";
+            //
+            // export default class BookModel {
+            //   private connection: Pool;
+            //
+            //   constructor(connection: Pool) {
+            //     this.connection = connection;
+            //   }
+            //
+            //   public async getAll(): Promise<Book[]> {
+            //     const result = await this.connection.execute('SELECT * FROM books');
+            //     const [rows] = result;
+            //     return rows as Book[];
+            //   }
+            //
+            //   public async getById(id: number): Promise<Book> {
+            //     const result = await this.connection.execute('SELECT * FROM books WHERE id=?', [id]);
+            //     const [rows] = result;
+            //     const [book] = rows as Book[];
+            //     return book;
+            //   }
+            //
+            //   public async create(book: Book): Promise<Book> {
+            //     const { title, price, author, isbn } = book;
+            //     const result = await this.connection.execute<ResultSetHeader>(
+            //       'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
+            //       [title, price, author, isbn]
+            //     );
+            //     const [dataInserted] = result;
+            //     const { insertId } = dataInserted;
+            //     return { id: insertId, ...book };
+            //   }
+            //
+                 public async update(id: number, book: Book) {
+                   const { title, price, author, isbn } = book;
+                   await this.connection.execute(
+                     'UPDATE books SET title=?, price=?, author=?, isbn=? WHERE id=?',
+                     [title, price, author, isbn, id]
+                   );
+                 }
+            // }
+
+
+
+        
+
+        ----------
+        Agora, vamos implementar o método update no service. Porém, vamos adicionar uma pequena regra de negócio para não ser possível alterar um livro que não existe.
+    
+                // ./services/books.service
+
+                // import connection from '../models/connection';
+                // import BookModel from '../models/book.model';
+                // import Book from '../interfaces/book.interface';
+                import { NotFoundError } from 'restify-errors';
+
+                // class BookService {
+                // ...
+
+                  public async update(id: number, book: Book): Promise<void> {
+                    const bookFound = await this.model.getById(id);
+                    if (!bookFound) {
+                      throw new NotFoundError('NotFoundError');
+                    }
+
+                    return this.model.update(id, book);
+                  }
+                // }
+                //
+                // export default BookService;
+
+
+
+        ---
+        Note que no método update é verificado se existe um livro correspondente ao id antes de editá-lo. Se não existir uma exceção vai ser disparada.
+
+
+        ---
+        Agora vamos implementar nosso controller:
+
+                // ./controllers/books.controller.ts
+
+                // import { Request, Response } from 'express';
+                // import { StatusCodes } from 'http-status-codes';
+                // import BookService from '../services/books.service';
+
+                // class BooksController {
+                //   ...
+
+                  public update = async (req: Request, res: Response) => {
+                    const id = Number(req.params.id);
+                    const book = req.body;
+                    await this.bookService.update(id, book);
+
+                    res.status(StatusCodes.NO_CONTENT).end();
+                  };
+                // }
+                //
+                // export default BooksController;
+
+
+
+        ----
+        Vamos para nosso arquivo de rotas.
+        
+                // routes/books.routes.ts
+
+                // import { Router } from 'express';
+                // import BooksController from '../controllers/books.controller';
+                // import validationBook from '../middlewares/books.middleware';
+
+                // const router = Router();
+
+                // const booksController = new BooksController();
+
+                // router.get('/books', booksController.getAll);
+                // router.get('/books/:id', booksController.getById);
+                // router.post('/books/', validationBook, booksController.create);
+                router.put('/books/:id', validationBook, booksController.update);
+
+                // export default router;
+        
+
+
+
+    --------------------------------------------------------------------------------------------------------
+    Removendo um livro
+
+        Por último, mas não menos importante, vamos implementar a exclusão de um livro. Vamos começar pelo model.
+
+                // ./models/book.model.ts
+
+                // import { Pool, ResultSetHeader } from 'mysql2/promise';
+                // import Book from '../interfaces/book.interface';
+
+                // export default class BookModel {
+                //   ...
+
+                    public async remove(id: number) {
+                      await this.connection.execute(
+                        'DELETE FROM books WHERE id=?',
+                        [id],
+                      );
+                    }
+                // }
+        
+
+
+        ----
+        Agora vamos implementar o service.
+    
+                // ./services/books.service.ts
+
+                // import connection from '../models/connection';
+                // import BookModel from '../models/book.model';
+                // import Book from '../interfaces/book.interface';
+                // import { NotFoundError } from 'restify-errors';
+
+
+                // class BookService {
+                //   public model: BookModel;
+                //
+                //   constructor() {
+                //     ...
+
+                    public async remove(id: number): Promise<void> {
+                      const bookFound = await this.model.getById(id);
+                      if (!bookFound) {
+                        throw new NotFoundError('NotFoundError');
+                      }
+
+                      this.model.remove(id);
+                    }
+                // }
+                //
+                // export default BookService;
+
+
+
+        ----
+        Agora o controller.
+
+                // ./controllers/books.controller.ts
+
+                // import { Request, Response } from 'express';
+                // import { StatusCodes } from 'http-status-codes';
+                // import BookService from '../services/books.service';
+
+                // class BooksController {
+                //   ...
+
+                    public remove = async (req: Request, res: Response) => {
+                      const id = Number(req.params.id);
+                      await this.bookService.remove(id);
+
+                      res.status(StatusCodes.OK).json({ message: 'Book deleted successfully' });
+                    };
+                }
+
+                // export default BooksController;
+
+
+
+        ----
+        Por último o arquivo de rotas, onde definiremos uma variável para não repetir trechos iguais em todas as rotas que usam o id.
+
+                // routes/books.routes.ts
+
+                // import { Router } from 'express';
+                // import BooksController from '../controllers/books.controller';
+                // import validationBook from '../middlewares/books.middleware';
+
+                // const router = Router();
+
+                // const booksController = new BooksController();
+
+                const booksSlashId = '/books/:id';
+
+                // router.get('/books', booksController.getAll);
+                router.get(booksSlashId, booksController.getById);
+                router.post('/books/', validationBook, booksController.create);
+                router.put(booksSlashId, validationBook, booksController.update);
+                router.delete(booksSlashId, booksController.remove);
+
+                // export default router;
+            
+
+        Pronto, finalizamos o último método do nosso CRUD.
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
