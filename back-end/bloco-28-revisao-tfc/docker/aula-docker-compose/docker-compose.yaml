@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  frontend:
+    build: frontend/ # Especificamos o contexto, ou seja, a pasta onde está o Dockerfile.
+    restart: always
+    ports:
+      - 3000:3000 # o primeiro é a porta do computador local e o segundo é a porta exposta no container
+    depends_on:
+      - backend
+    volumes: # 4º) esse volume é diferente: nesse caso, na linha abaixo, estou mapeando a pasta .logs que está no meu pc, para /var/log/frontend que está dentro do container. (ao usar nos projetos e usar a extensão do vs code, vai fazer tipo um binding de arquivos entre as duas pastas)
+      - ./logs:/var/log/frontend
+    networks:
+      - rede-virtual-1
+  backend:
+    build: backend/
+    restart: always
+    ports:
+      - 3001:3001
+    environment:
+      - DB_HOST=database
+    depends_on:
+      - database
+    networks:
+      - rede-virtual-1
+      - rede-virtual-2
+  database:
+    image: betrybe/docker-compose-example-database:v1 # Especificamos a Imagem Docker diretamente.
+    restart: always
+    volumes:
+      - dados-do-banco:/data/db # 3º) Tudo que for feito nessa pasta /data/db dentro do container, será salvo no volume que criei
+    # OBS: Por que mapeamos o caminho “/data/db”? como este banco de dados é um MongoDB, seus dados são armazenados nesta pasta específica,
+    networks:
+      - rede-virtual-2
+
+volumes: # começo aqui, dizendo que o compose vai criar um volume virtual
+  dados-do-banco: # 2º) nome pro volume
+
+networks:
+  rede-virtual-1:
+  rede-virtual-2:
+
+
+# docker-compose up -d
+
+# docker-compose down
