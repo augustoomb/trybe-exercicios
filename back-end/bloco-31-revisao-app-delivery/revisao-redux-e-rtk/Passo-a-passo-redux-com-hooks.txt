@@ -1,0 +1,20 @@
+A partir de agora estamos usando de fato o redux moderno. Antes, usando classes, 
+usávamos uma forma antiga. 
+
+(Passos abaixo seguem a documentação oficial: https://react-redux.js.org/tutorials/quick-start
+
+-Instalar as dependências:
+    npm install @reduxjs/toolkit react-redux react-scripts
+
+-Criar uma pasta redux, dentro de src
+
+-Criar o arquivo store.js, dentro da pasta redux com o conteúdo abaixo:
+
+    import { configureStore } from '@reduxjs/toolkit'
+
+    export default configureStore({
+      reducer: {},
+    })
+
+
+-O provider fica igual era antes
