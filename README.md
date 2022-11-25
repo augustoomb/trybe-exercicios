@@ -132,7 +132,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 - [X] 18-1: _[Projeto - App de Receitas]
 
-## Desenvolvimento Back-end :hourglass_flowing_sand:
+## Desenvolvimento Back-end :white_check_mark:
 
 ##### Bloco 19: Docker: Utilizando Containers
 
@@ -230,12 +230,12 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 31 - Projeto - App de Delivery
 
-- [ ] 31-1: _[Projeto - App de Delivery]
+- [X] 31-1: _[Projeto - App de Delivery]
 
 ##### Bloco 32 - MasterClass - VPS, CI/CD
 
-- [ ] 32-1: _VPS_
-- [ ] 32-2: _--_
+- [X] 32-1: _VPS_
+- [X] 32-2: _--_
 
 
 ## Ciência da Computação :hourglass_flowing_sand:
