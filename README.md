@@ -261,14 +261,14 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [ ] 35-2: _Raspagem de dados_
 - [ ] 35-3: _[Projeto - Tech news]
 
-##### Bloco 36: Redes de Raspagem de Dados
+##### Bloco 36: Algoritmos
 
 - [ ] 36-1: _Complexidade de algoritmos_
 - [ ] 36-2: _Recursividade e Estratégias para a solução de problemas_
 - [ ] 36-3: _Algoritmos de ordenação e busca_
 - [ ] 36-4: _[Projeto - Algoritmos]
 
-##### Bloco 37: Redes de Raspagem de Dados
+##### Bloco 37: Estrutura de Dados I: Arrays, Listas, Filas e Pilhas
 
 - [ ] 37-1: _Arquitetura de computadores_
 - [ ] 37-2: _Arrays_
@@ -276,7 +276,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [ ] 37-4: _Pilhas e Filas_
 - [ ] 37-5: _[Projeto - TING - Trybe Is Not Google]
 
-##### Bloco 38: Redes de Raspagem de Dados
+##### Bloco 38: Estrutura de Dados II: Hashmaps e Sets
 
 - [ ] 38-1: _Hashmap e Dict_
 - [ ] 38-2: _Set_
