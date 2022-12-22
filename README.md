@@ -250,10 +250,10 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 34: Python
 
-- [ ] 34-1: _P.O.O em Python_
-- [ ] 34-2: _Padrões - Iterator, Adapter, Strategy_
-- [ ] 34-3: _Padrões - Decorator, Observer, Factory_
-- [ ] 34-4: _[Projeto - Relatórios de Estoque]
+- [X] 34-1: _P.O.O em Python_
+- [X] 34-2: _Padrões - Iterator, Adapter, Strategy_
+- [X] 34-3: _Padrões - Decorator, Observer, Factory_
+- [X] 34-4: _[Projeto - Relatórios de Estoque]
 
 ##### Bloco 35: Redes de Raspagem de Dados
 
