@@ -59,7 +59,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
 - [X] 7-3: _Testes unitários em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários]
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/augustoomb/project-js-unit-tests)
 
 ##### Bloco 8: JavaScript ES6
 
@@ -246,7 +246,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 33-1: _Aprendendo Python_
 - [X] 33-2: _Entrada e Saída de Dados_
 - [X] 33-3: _Testes_
-- [X] 33-4: _[Projeto - Job Insights]
+- [X] 33-4: _[Projeto - Job Insights](https://github.com/augustoomb/project-job-insights)
 
 ##### Bloco 34: Python
 
