@@ -140,7 +140,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 19-1: _Utilizando Containers_
 - [X] 19-2: _Manipulando Imagens no Docker_
 - [X] 19-3: _Orquestrando Containers com Docker Composer_
-- [X] 19-4: _[Projeto - Docker Todo-List]
+- [X] 19-4: _[Projeto - Docker Todo-List](https://github.com/augustoomb/project-docker-todo-list)
 
 ##### Bloco 20: Introdução - Bancos de dados relacionais
 
