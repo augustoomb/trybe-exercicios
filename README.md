@@ -165,7 +165,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 22-3: _Mocha, Chai e Sinon - Testes de Back-End com Node.js_
 - [X] 22-4: _Express - HTTP com Node.js_
 - [X] 22-5: _Express - Middlewares_
-- [X] 22-6: _[Projeto - Talker Manager]
+- [X] 22-6: _[Projeto - Talker Manager](https://github.com/augustoomb/projeto-talker-manager)
 
 ##### Bloco 23: Node.js Camada de Serviço e Arquitetura Rest e Restful
 
@@ -174,7 +174,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 23-2: _Arquitetura de Software - Camada de Controller e Service_
 - [X] 23-3: _Arquitetura Web - Rest e Restful_
 - [X] 23-4: _Arquitetura de Software - Testando as Camadas_
-- [X] 23-5: _[Projeto - Store Manager]
+- [X] 23-5: _[Projeto - Store Manager](https://github.com/augustoomb/projeto-store-manager)
 
 ##### Bloco 24 - Node.js: ORM e Autenticação
 
@@ -183,7 +183,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 24-2: _ORM - Associations_
 - [X] 24-3: _JWT - (JSON Web Token)_
 - [X] 24-4: _Testando APIs com Testes de Integração_
-- [X] 24-5: _[Projeto - API de Blogs]
+- [X] 24-5: _[Projeto - API de Blogs](https://github.com/augustoomb/projeto-blogs-api)
 
 ##### Bloco 25 - Deployment
 
@@ -197,7 +197,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 26-1: _Introdução - TypeScript_
 - [X] 26-2: _Tipagem Estática e Generics_
 - [X] 26-3: _Express com TypeScript_
-- [X] 26-4: _[Projeto - Trybe Smith]
+- [X] 26-4: _[Projeto - Trybe Smith](https://github.com/augustoomb/projeto-trybesmith)
 
 ##### Bloco 27 - Programação Orientada a Objetos (POO) e SOLID
 
@@ -206,7 +206,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 27-3: _Polimorfismo_
 - [X] 27-4: _SOLID - Introdução e Princípios S, O e D_
 - [X] 27-5: _SOLID - Princípios L e I_
-- [X] 27-6: _[Projeto - Trybers and Dragons]
+- [X] 27-6: _[Projeto - Trybers and Dragons](https://github.com/augustoomb/projeto-trybers-and-dragons)
 
 ##### Bloco 28 - Projeto - TFC - Trybe Futebol Clube
 
