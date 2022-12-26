@@ -148,14 +148,14 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 20-2: _Encontrando dados em um banco de dados_
 - [X] 20-3: _Filtrando dados de forma especí­fica_
 - [X] 20-4: _Manipulando tabelas_
-- [X] 20-5: _[Projeto - All For One]
+- [X] 20-5: _[Projeto - All For One](https://github.com/augustoomb/project-mysql-all-for-one)
 
 ##### Bloco 21: Bancos de dados relacionais
 
 - [X] 21-1: _Funções mais usadas no SQL_
 - [X] 21-2: _Descomplicando JOINs_
 - [X] 21-3: _Transformando ideias em um modelo de banco de dados_
-- [X] 21-4: _[Projeto - One For All]
+- [X] 21-4: _[Projeto - One For All](https://github.com/augustoomb/project-mysql-one-for-all)
 
 ##### Bloco 22: Introdução ao desenvolvimento web com Node.js
 
