@@ -210,7 +210,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 28 - Projeto - TFC - Trybe Futebol Clube
 
-- [X] 28-1: _Projeto - TFC - Trybe Futebol Clube_
+- [X] 28-1: _Projeto - TFC - Trybe Futebol Clube.(https://github.com/augustoomb/project-trybe-futebol-clube)
 
 ##### Bloco 29: Introdução ao MongoDB
 
@@ -220,13 +220,13 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 29-3: _Operadores de Consulta_
 - [X] 29-4: _Updates Simples_
 - [X] 29-5: _Updates Complexos - Arrays_
-- [X] 29-6: _[Projeto - Commerce]
+- [X] 29-6: _[Projeto - Commerce](https://github.com/augustoomb/project-mongodb-commerce)
 
 ##### Bloco 30 - MongoDB com Node.js e POO
 
 - [X] 30-1: _Mongoose e arquitetura MSC(camada Model)_
 - [X] 30-2: _Mongoose e arquitetura MSC(camada Service e Controller)_
-- [X] 30-3: _[Projeto - Car Shop]
+- [X] 30-3: _[Projeto - Car Shop](https://github.com/augustoomb/project-car-shop)
 
 ##### Bloco 31 - Projeto - App de Delivery
 
