@@ -1,0 +1,31 @@
+EXERCÍCIO 1:
+     requisição simples (get) com cURL:
+
+          curl localhost:3000
+
+
+     Requisição POST com JSON no body 
+
+          curl -X POST \
+          -H 'Content-Type: application/json' \
+          -d '{ "nome_autor": "Dan Brown", "site_autor":  "https://danbrown.com/"}' \
+          localhost:3000/authors
+
+
+     Ex usando Header:
+
+     curl --request POST \
+     --header 'Content-Type: application/json' \
+     --header 'Authorization: ApiKey EXAMPLE-TOKEN' \
+     --data '{ "foo": "bar" }' \
+     localhost:3000
+
+
+EXERCÍCIO 2:
+
+     curl -L google.com
+
+
+EXERCÍCIO 3:
+
+     wget betrybe.com
