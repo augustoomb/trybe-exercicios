@@ -1,0 +1,17 @@
+No diretório do exercicio, rodar no terminal:
+
+    python3 exercicio04.py
+
+    telnet 127.0.0.1 8085
+
+
+
+Saída:
+
+    Trying 127.0.0.1...
+    Connected to 127.0.0.1.
+    Escape character is '^]'.
+    Hello, World!
+
+
+(ao digitar qualquer mensagem e dar enter, ela será mostrada logo abaixo)
