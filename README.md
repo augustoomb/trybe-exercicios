@@ -263,10 +263,10 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 36: Algoritmos
 
-- [ ] 36-1: _Complexidade de algoritmos_
-- [ ] 36-2: _Recursividade e Estratégias para a solução de problemas_
-- [ ] 36-3: _Algoritmos de ordenação e busca_
-- [ ] 36-4: _[Projeto - Algoritmos]
+- [X] 36-1: _Complexidade de algoritmos_
+- [X] 36-2: _Recursividade e Estratégias para a solução de problemas_
+- [X] 36-3: _Algoritmos de ordenação e busca_
+- [X] 36-4: _[Projeto - Algoritmos]
 
 ##### Bloco 37: Estrutura de Dados I: Arrays, Listas, Filas e Pilhas
 
