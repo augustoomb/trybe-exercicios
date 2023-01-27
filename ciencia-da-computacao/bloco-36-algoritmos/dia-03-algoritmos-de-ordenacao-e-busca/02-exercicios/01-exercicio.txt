@@ -1,0 +1,47 @@
+# Exercício 1 Dado um array com os seguintes elementos
+# ["zebra", "macaco", "elefante", "arara", "javali"],
+# após duas iterações utilizando bubble sort, como estaria este array?
+
+
+ITERAÇÃO 1
+
+    1 - Comparar "zebra" e  "macaco". Macaco devo vir antes, então:
+
+        ["macaco", "zebra", "elefante", "arara", "javali"]
+
+
+    2 - Comparar "zebra" e "elefante". Elefante deve vir antes. Então:
+
+        ["macaco", "elefante", "zebra", "arara", "javali"]
+
+
+    3 - Comparar "zebra" e "arara". arara deve vir antes. Então:
+
+        ["macaco", "elefante", "arara", "zebra", "javali"]
+
+
+    3 - Comparar "zebra" e "javali". javali deve vir antes. Então:
+
+        ["macaco", "elefante", "arara", "javali", "zebra"]
+
+
+ITERAÇÃO 2
+
+    1 - Comparar "macaco" e  "elefante". elefante devo vir antes, então: (0)
+
+        ["elefante", "macaco", "arara", "javali", "zebra"]
+
+
+    2 - Comparar "macaco" e  "arara". arara devo vir antes, então: (1)
+
+        ["elefante", "arara", "macaco", "javali", "zebra"]
+
+
+    3 - Comparar "macaco" e  "javali". javali devo vir antes, então: (2)
+
+        ["elefante", "arara", "javali", "macaco", "zebra"]
+
+
+    4 - Comparar "macaco" e  "zebra". macaco devo vir antes, então: (3)
+
+        ["elefante", "arara", "javali", "macaco", "zebra"]
