@@ -270,11 +270,11 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 37: Estrutura de Dados I: Arrays, Listas, Filas e Pilhas
 
-- [ ] 37-1: _Arquitetura de computadores_
-- [ ] 37-2: _Arrays_
-- [ ] 37-4: _Nó e listas encadeadas_
-- [ ] 37-4: _Pilhas e Filas_
-- [ ] 37-5: _[Projeto - TING - Trybe Is Not Google]
+- [X] 37-1: _Arquitetura de computadores_
+- [X] 37-2: _Arrays_
+- [X] 37-4: _Nó e listas encadeadas_
+- [X] 37-4: _Pilhas e Filas_
+- [X] 37-5: _[Projeto - TING - Trybe Is Not Google]
 
 ##### Bloco 38: Estrutura de Dados II: Hashmaps e Sets
 
