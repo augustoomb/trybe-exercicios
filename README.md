@@ -238,7 +238,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 32-2: _CI/CD_
 
 
-## Ciência da Computação :hourglass_flowing_sand:
+## Ciência da Computação :white_check_mark:
 
 ##### Bloco 33: Introdução - Ciência da Computação
 
@@ -278,6 +278,6 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 ##### Bloco 38: Estrutura de Dados II: Hashmaps e Sets
 
-- [ ] 38-1: _Hashmap e Dict_
-- [ ] 38-2: _Set_
-- [ ] 38-3: _[Projeto - Restaurant Orders]
+- [X] 38-1: _Hashmap e Dict_
+- [X] 38-2: _Set_
+- [X] 38-3: _[Projeto - Restaurant Orders]
