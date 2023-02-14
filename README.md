@@ -253,20 +253,20 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 34-1: _P.O.O em Python_
 - [X] 34-2: _Padrões - Iterator, Adapter, Strategy_
 - [X] 34-3: _Padrões - Decorator, Observer, Factory_
-- [X] 34-4: _[Projeto - Relatórios de Estoque]
+- [X] 34-4: _[Projeto - Relatórios de Estoque](https://github.com/augustoomb/projeto-inventory-report)
 
 ##### Bloco 35: Redes de Raspagem de Dados
 
 - [X] 35-1: _Arquitetura de redes, ferramentas e segurança_
 - [X] 35-2: _Raspagem de dados_
-- [X] 35-3: _[Projeto - Tech news]
+- [X] 35-3: _[Projeto - Tech news](https://github.com/augustoomb/projeto-tech-news)
 
 ##### Bloco 36: Algoritmos
 
 - [X] 36-1: _Complexidade de algoritmos_
 - [X] 36-2: _Recursividade e Estratégias para a solução de problemas_
 - [X] 36-3: _Algoritmos de ordenação e busca_
-- [X] 36-4: _[Projeto - Algoritmos]
+- [X] 36-4: _[Projeto - Algoritmos](https://github.com/augustoomb/projeto-algoritmos)
 
 ##### Bloco 37: Estrutura de Dados I: Arrays, Listas, Filas e Pilhas
 
@@ -274,10 +274,10 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 37-2: _Arrays_
 - [X] 37-4: _Nó e listas encadeadas_
 - [X] 37-4: _Pilhas e Filas_
-- [X] 37-5: _[Projeto - TING - Trybe Is Not Google]
+- [X] 37-5: _[Projeto - TING - Trybe Is Not Google](https://github.com/augustoomb/projeto-ting)
 
 ##### Bloco 38: Estrutura de Dados II: Hashmaps e Sets
 
 - [X] 38-1: _Hashmap e Dict_
 - [X] 38-2: _Set_
-- [X] 38-3: _[Projeto - Restaurant Orders]
+- [X] 38-3: _[Projeto - Restaurant Orders](https://github.com/augustoomb/projeto-restaurant-orders)
