@@ -281,3 +281,7 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 - [X] 38-1: _Hashmap e Dict_
 - [X] 38-2: _Set_
 - [X] 38-3: _[Projeto - Restaurant Orders](https://github.com/augustoomb/projeto-restaurant-orders)
+
+
+## Conteúdo Bônus :white_check_mark:
+- [X] 38-3: _[Projeto - Socket.IO]()
