@@ -284,4 +284,4 @@ O programa conta com mais de 1.500 horas de aulas online, aborda introdução ao
 
 
 ## Conteúdo Bônus :white_check_mark:
-- [X] 38-3: _[Projeto - Socket.IO]()
+- [X] : _[Projeto - Socket.IO]()
