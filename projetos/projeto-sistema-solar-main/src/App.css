@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.app {
+  background-image: url('images/background.png');
+  color: whitesmoke;
+}

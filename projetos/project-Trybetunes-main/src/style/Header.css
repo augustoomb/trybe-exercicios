@@ -1,0 +1,42 @@
+.menu-nivel-1 {
+  background-color: #023031;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 15px;
+}
+
+.menu-nivel-2 {
+  border: 1px solid gray;
+  display: flex;
+  font-size: x-large;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+a {
+  background-color: #f0f2f5;
+  color: #036b52;
+  flex-grow: 1;
+  text-align: center;
+  text-decoration: none;
+}
+
+.active {  /* O próprio react 'seta' essa classe no NavLink que está ativo */
+  background-color: #036b52;
+  color: #f0f2f5;
+  text-decoration: none;
+}
+
+.menu-logo {
+  height: auto;
+  max-width: 9%;
+}
+
+.nome-usu {
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #036b52;
+  padding: 4px;
+}

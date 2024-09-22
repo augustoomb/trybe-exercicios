@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  flex-direction: row;
+}
+
+#trybewarts-header-title {
+  color: white;
+  font-size: 2em;
+}
+
+.trybewarts-header-logo {
+  width: 60px;
+  margin-left: 10px;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#buttonSubmit {
+  padding: 2px 30px;
+  font-size: 0.8em;
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: rgb(78, 44, 131);
+  color: white;
+}
+
+.trybewarts-login input {
+  width: 100px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: transparent;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 25px;
+  font-size: small;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(239, 239, 239);
+}
+
+#title-evaluation-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: x-large;
+}
+
+#evaluation-form {/* formulario */
+  display: flex;
+  flex-direction: column;
+  width: 675px;
+  padding-left: 80px;
+  font-weight: 600;
+}
+
+#div-trybewarts-forms-logo {
+  display: flex;
+  align-items: center;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
+#nome-sobrenome , #email-casas {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nome-sobrenome input , #email-casas input , #email-casas select {
+  flex-basis: 50%;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#input-name {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#house {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#familia-e-aprendizado {
+  display: flex;
+  justify-content: space-between;
+}
+
+#radio-familia , #checkbox-aprendizado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#radio-familia {
+  height: 100px;
+}
+
+#opcoes-checkbox-materias {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#radio-rate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#comentario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#termos {
+  margin-bottom: 10px;
+}
+
+#submit-btn {
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: rgb(78, 44, 131);
+  color: white;
+}
+
+.hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: rgb(60, 64, 74);
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 41px;
+}

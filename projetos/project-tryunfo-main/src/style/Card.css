@@ -1,0 +1,47 @@
+.componente-card {
+  background-color: #023031;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.conteudo-componente-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.titulo-card {
+  text-align: center;
+}
+
+.card {
+  align-items: center;
+  background-color: #036b52;
+  border: white 7px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  height: 400px;
+  width: 40%;
+}
+
+.div-t-card {
+  align-items: center;
+  background-color: #023031;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  height: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
+.img-card {
+  height: 30%;
+  width: 100%;
+}
